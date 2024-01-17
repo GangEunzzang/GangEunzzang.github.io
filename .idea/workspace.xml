@@ -1,655 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b6ddf2b0-d6e8-4a78-b25d-bb9d7b1911b0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/404.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTICE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README 2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/icon-128x128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/icon-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/icon-152x152.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/icon-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/icon-384x384.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/icon-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/icon-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/icon-96x96.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GangEunzzang.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GangEunzzang.github.io.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/authors.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/authors.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/resume.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/social.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/strings.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/variables.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_featured_categories/database.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_featured_categories/git.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_featured_categories/java.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_featured_categories/server.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_featured_categories/spring.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_featured_categories/기술면접.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_featured_tags/javascript.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/base-classes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/analytics.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/breadcrumbs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/comments.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/menu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/scripts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/sidebar-bg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/sidebar-sticky.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/body/sidebar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/author.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/avatar-tag.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/dingbat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/hy-img.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/link.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/message.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/pagination.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/post-list-item.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/post.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/related-posts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/social-list-item.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/social.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/components/tag-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/features.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/css/inline" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/feed-tag.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/links-static.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/links.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/meta-static.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/meta.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/page-style.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/scripts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/seo-fallback.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/seo-tag.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/styles-inline.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/styles-layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/styles-no-inline.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head/styles.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/header.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/icon-github.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/if-non-null" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/my-body.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/my-comments.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/my-head.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/my-scripts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/scripts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/scripts/cssrelpreload.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/scripts/load-js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/scripts/load-js.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/scripts/loadCSS.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/scripts/nomodule.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/scripts/nomodule.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/smart-url" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/smart-url.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/styles/common.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/styles/inline.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/styles/page-style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/styles/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/styles/variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/table.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/templates.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/templates/animation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/templates/back.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/templates/loading.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/templates/permalink.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/lib/modernizr-custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/lib/version.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/clap-button.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/cross-fader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/drawer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/entry.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/flip/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/flip/title.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/languages.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/navbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/polyfills/fetch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/polyfills/resize-observer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/polyfills/shadydom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/polyfills/webcomponents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/push-state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_js/src/upgrades.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/compress.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/compress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/not-found.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/plain.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_data/contact.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/contact.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/favicons.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/favicons.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/redirect.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/tag-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_pages/category-archive.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_pages/tag-archive.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_pages/year-archive.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-09-15-Connecting-to-GITHUB-Using-SSH.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-09-15-How-to-use-git.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-09-21-Solve-git-bash-problem-when-running-ssh-agent-in-windows.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-10-11-Running-server-and-client-at-the-same-time.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-11-26-What-is-Apache-NginX-or-Tomcat.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Database/2021-09-20-Mongo-DB-related-errors.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Database/2021-09-20-What-is-Mongo-db.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Database/2022-05-18-What-is-Database-Sharding.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Server/2021-10-11-node-js-기초.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Server/2022-05-20-Message-Queue.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Server/2022-05-21-Redis.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Server/2022-05-24-MSA.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Spring/2022-04-29-Spring-introduction.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Spring/2022-05-07-Spring-AOP-trouble-shooting.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Spring/2022-05-09-SOLID.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Spring/2022-05-10-social-login.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Spring/2022-05-12-make-rest-api-with-springBoot.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Spring/2022-05-25-spring-security.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/interview/2022-05-21-Technical-Interview-Expected-Questions-Cloud.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/interview/2023-08-01-Github-related-to-CS-interview-preparation.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/interview/2023-08-01-Technical-Interview-Expected-Questions-Java.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/interview/2023-08-01-Technical-Interview-Expected-Questions-Network.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/interview/2023-08-01-Technical-Interview-Expected-Questions-spring.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-11-29-Effective-java-item1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-11-30-Effective-java-item2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-01-Effective-java-Day5-item2-and-item3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-03-Effective-java-Day7-item3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-04-Effective-java-Day8-item14.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-05-Effective-java-Day9-item3-part2-item4-item5.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-06-Effective-java-Day10-item5.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-07-Effective-java-Day11-item6-and-item7.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-08-Effective-java-Day12-item8.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-12-Effective-java-Day13-item24.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-16-Effective-java-Day14-item09-item10.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-17-Effective-java-Day15-item11,12,13,15.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-20-Effective-java-Day16-item15,16,17.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-21-Effective-java-Day17-item17.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-22-Effective-java-Day18-item18.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-26-Effective-java-Day19-item19.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-27-Effective-java-Day20-item19.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-28-Effective-java-Day21-item20.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-29-Effective-java-Day22-item21,22,23.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-30-Effective-java-Day23-item25,26.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2021-12-31-Effective-java-Day24-item26(2).md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2022-01-01-Effective-java-Day25-item27,28.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2022-01-02-Effective-java-Day26-item40.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2022-01-03-Effective-java-Day27-item29.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2022-01-04-Effective-java-Day28-item30.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2022-01-05-Effective-java-Day29-item31.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2022-01-16-Effective-java-Day30-item63.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2022-02-15-Effective-java-Day31-item72.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2022-02-20-Effective-java-Day32-item86.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/EffectiveJava/2022-03-01-Effective-java-Day33-item66.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/ModernJavaInAction/2023-09-01-Modern-Java-chpater1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/ModernJavaInAction/2023-09-02-Modern-Java-chpater2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/ModernJavaInAction/2023-09-03-Modern-Java-chpater3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/ModernJavaInAction/2023-09-04-Modern-Java-chpater4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/ModernJavaInAction/2023-09-05-Modern-Java-chpater5.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/ModernJavaInAction/2023-09-07-Modern-Java-chpater7.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2021-11-27-programing-basic.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2021-11-28-class-member-method.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2021-12-03-Java-Generic.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2021-12-05-IntelliJ-Shortcut-keys.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2021-12-05-What-is-Serialization-of-Java.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2021-12-07-Java-reference-and-GC.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2021-12-09-Finite-state-machine-for-pattern-matching.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2021-12-18-Hash-Code-and-Hash-Table.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2021-12-19-Synchronization-of-threads.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2022-01-01-Java-wildcard-type.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2022-01-05-Java-Iterator.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2022-04-12-Introduction-To-AssertJ.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2022-04-22-First-Class-Collection.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2022-04-22-lambda-expression-syntax.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2022-04-22-wrap-primitive-type.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/java/etc/2024-01-05-Degisn-Pattern.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_reboot-mod.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_spinner.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_syntax.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_tippy.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/html.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_avatar.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_base.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_break-layout.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_content.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_footer.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_images.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_katex.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_links.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_mark-external.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_menu.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_sidebar.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_social.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_toc.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/hydejack/_utilities.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/my-inline.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/my-style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/my-variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_base.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_code.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_footer.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_footnotes.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_message.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_pagination.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_posts.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_read-more.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_related.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_table.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/pooleparty/_type.pre.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/tippyjs/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/tippyjs/_vars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/tippyjs/animations/fade.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/tippyjs/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/.bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/a11y/assistive-mml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/a11y/complexity.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/a11y/explorer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/a11y/semantic-enrich.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/adaptors/liteDOM.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/asciimath.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/mml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/mml/entities.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex-base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex-full.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/action.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/all-packages.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/ams.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/amscd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/autoload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/bbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/boldsymbol.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/braket.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/bussproofs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/cancel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/color.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/colorV2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/configMacros.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/enclose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/extpfeil.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/html.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/mhchem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/newcommand.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/noerrors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/noundefined.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/physics.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/require.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/tagFormat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/textmacros.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/unicode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/input/tex/extensions/verb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/latest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/mml-chtml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/mml-svg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/node-main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/tex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Math-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/svg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/output/svg/fonts/tex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/sre/mathmaps/de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/sre/mathmaps/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/sre/mathmaps/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/sre/mathmaps/fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/sre/mathmaps/mathmaps_ie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/sre/mathmaps/nemeth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/sre/sre-node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/sre/sre_browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/startup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/tex-chtml-full.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/tex-chtml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/tex-mml-chtml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/tex-mml-svg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/tex-svg-full.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/tex-svg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/ui/menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/MathJax/es5/ui/safe.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/html5shiv/.bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/html5shiv/Gruntfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/html5shiv/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/html5shiv/dist/html5shiv-printshiv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/html5shiv/dist/html5shiv-printshiv.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/html5shiv/dist/html5shiv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/html5shiv/dist/html5shiv.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/.bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/auto-render.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/auto-render.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/auto-render.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/copy-tex.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/copy-tex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/copy-tex.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/copy-tex.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/copy-tex.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/mathtex-script-type.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/mathtex-script-type.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/mathtex-script-type.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/mhchem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/mhchem.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/mhchem.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/render-a11y-string.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/render-a11y-string.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/contrib/render-a11y-string.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_AMS-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_AMS-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_AMS-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Caligraphic-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Fraktur-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Fraktur-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Fraktur-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Fraktur-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Fraktur-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-BoldItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-BoldItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-Italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-Italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Main-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Math-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Math-BoldItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Math-BoldItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Math-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Math-Italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Math-Italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_SansSerif-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_SansSerif-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_SansSerif-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_SansSerif-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_SansSerif-Italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_SansSerif-Italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_SansSerif-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_SansSerif-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_SansSerif-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Script-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Script-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Script-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size1-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size1-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size1-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size2-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size2-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size2-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size3-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size3-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size3-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size4-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size4-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Size4-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Typewriter-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/fonts/KaTeX_Typewriter-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/katex.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/katex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/katex.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/katex.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/dist/katex.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/docs/cli.md.template" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/flow-typed/npm/jest_v24.x.x.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bower_components/katex/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/hydejack-9.1.4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icomoon/fonts/icomoon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icomoon/fonts/icomoon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icomoon/fonts/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icomoon/fonts/icomoon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icomoon/selection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icomoon/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/icon-128x128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/icon-152x152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/icon-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/icon-384x384.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/icon-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/icon-72x72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/icon-96x96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/CS/Ceph_Operation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Colored-Pointers.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Database/Database-Sharding-example.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Database/Database-Sharding.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Database/comparing-Sharding.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Database/structure-of-Sharding.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Deserialization.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/FSM.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/FileInputStream-close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/G1GC Heap.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/G1GC-process.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/JDBC.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Load-Barriers.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/React-lifecycle-methods-diagram.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/SPECjbb2015-pause-times.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Server/Basic_flow_of_producer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Server/Look-Aside(Lazy Loading).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Server/basic_structure.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Server/key_attributes_related_to_throughput.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Server/senders_basic_behavior.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Server/server_async_comm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Server/server_kafka.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Server/server_kafka_partition.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Server/server_sync_comm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Spring-operating-environment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Spring/spring_security_autehntication.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/Spring/spring_security_filter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/ZGC.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/algorithm_lessson15_array.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/apacehAndNginX.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/assertJ_IntelliJ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/assertj_using.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/attempt-import-error.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/autoclosable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/9.1.0-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/9.1.0-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/9.1.0-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/COLOURlovers.com-Hydejack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/blog-layout.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/caleb-george-old.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/caleb-george.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/cover-page.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/dark-mode-ii.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/dark-mode.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/example-content-ii.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/example-content-iii.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/example-content-iii@0,25x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/example-content-iii@0,5x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/grid.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-8@0,25x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-8@0,25x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-8@0,5x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-8@0,5x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-9-dark.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-9-dark@0,25x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-9-dark@0,5x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-9@0,25x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/hydejack-9@0,5x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/jeremy-bishop.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/jeremy-bishop@0,5x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/jj-ying.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/lazy-images.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/louis-hansel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/louis-hansel@0,25x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/louis-hansel@0,5x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/resume.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/steve-harvey.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/steve-harvey@0,125x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/steve-harvey@0,25x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/steve-harvey@0,5x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/w3m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/blog/wade-lambert.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/class-component-vs-functional-component.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/class-component.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/collection-structor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/collection.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/combine-reducer.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/constrantPool.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/custom-css-file-path.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/developing-frog.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/docs/chrome-print.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/docs/google-fonts.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/download-express-js.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/ftp_actvie.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/ftp_passive.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/functional-component.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/generate-new-ssh-key.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/hashTable.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/heap-after-jdk-1point8.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/heap-before-jdk-1point7.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/img_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item11_HashMap_getNode.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item11_Quadratic Probing.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item11_hashtable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item11_hashtable_open_addressing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item11_hashtable_separate_chaining.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item11_linear_probing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item13-object-clone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item16-NotGoodExam-for-public-class.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item18_callBack.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item24-nonStatic.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item25_build_result.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item25_intellij_error.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item27_intelliJ_additional_option.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item27_unchecked_assignment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item28_If_there_is_generic_array.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item29_incompatiable_types.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item29_unchecked_cast.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item29_unchecked_cast2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item31_java_collection_frameworks.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item40-IntelliJ-select-methods.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item40-override-inspection.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item40-override-warning.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item40_abstract_warning.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item63-StringBuilderVsStringBuffer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item63_Concatenating_Strings.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item63_StringBuilder-And-StringBuffer.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item63_concat.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item63_diffrent_capacity.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item63_stringBuffer.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item63_stringBuilder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/item63_suitable_capacity.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/iterable_hierarchy.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/java-lang-references.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/jekyll-webrick-error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/jvm-structer.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/jvm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/keySet-of-HashMap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/me.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/modern-java-chpater2-lamda.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/mongodb-connected.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/mongodb-survery-most.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/mongodb-survery.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/mongoose-package-json.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/netscape.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/ok-typeerror-source.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/react-logo.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/redux-data-flow.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/redux-exam.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/redux-store.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/rootSet-Objects-and-unreachable-objects.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/runtime-data-area.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/script-excution-error-now.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/script-excution-error-now2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/serialization.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/sidebar-bg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/simple-jekyll-search-ex.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/spring-MVC-template-engine.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/spring-static-content-feature.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/ssh-agent-add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/ssh-agent-pid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/string_matches.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/swipe.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/total_sequence_diagram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/tryWithResource.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/tryfinally.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/typeerror-source.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/typeerror.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/webServerRelation.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/without-redux.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/zzangu.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/zzanguBackGround.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/simple-jekyll-search.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/json/search.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/me.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/site.webmanifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/version.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/advanced.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/basics.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/config.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/install.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/migration.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/scripts.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/upgrade.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/writing.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms-by-example.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/googlefc809b2a891946b2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll-theme-hydejack.gemspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/licenses/Apache-2.0.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/licenses/GPL-3.0.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/licenses/MIT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/licenses/PRO.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/licenses/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/licenses/W3C-20150513.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/naver38ec7105e3396e6eb497b549362e0f42.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workers-site/.cargo-ok" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workers-site/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workers-site/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrangler.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2023-05-08-PSQL 사용법 정리.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2023-01-01-effective1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_tabs/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/_tabs/about.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -665,10 +38,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2b5EfJ4ZaHV6rj6dsYQPHWPIV4A" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -677,11 +50,28 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/igang-eun/Desktop/spring/GangEunzzang.github.io/assets/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "/Users/igang-eun/Desktop/spring/GangEunzzang.github.io/node_modules/stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/img" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -698,6 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705496642317</updated>
       <workItem from="1705496644964" duration="161000" />
+      <workItem from="1705496816826" duration="1490000" />
     </task>
     <servers />
   </component>

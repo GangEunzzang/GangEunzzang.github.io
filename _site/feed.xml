@@ -1,0 +1,70 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>게임과 개발사이</title>
+  <subtitle>공부 정리 및 끄적끄적</subtitle>
+  <updated>2024-01-17T22:31:56+09:00</updated>
+  <author>
+    <name>GangEun</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
+  <rights> © 2024 GangEun </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Item 1 - 생성자 대신 정적 팩터리 메서드를 고려하라</title>
+    <link href="http://localhost:4000/posts/effective1/" rel="alternate" type="text/html" title="Item 1 - 생성자 대신 정적 팩터리 메서드를 고려하라" />
+    <published>2023-01-01T23:30:00+09:00</published>
+  
+    <updated>2023-01-01T23:30:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/effective1/</id>
+    <content src="http://localhost:4000/posts/effective1/" />
+    <author>
+      <name>GangEun</name>
+    </author>
+
+  
+    
+    <category term="java" />
+    
+    <category term="effective-java" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      정적 팩터리 메서드의 장점
+1. 이름을 가질 수 있다.
+정적 팩터리 메서드는 생성자보다 읽기 편하다.
+
+하나의 시그니처로는 생성자를 하나만 만들 수 있다.
+    public Student(String studentID, int grade);     //가 생성된 상태에서
+    public Student(String studentID, int GPA);  //이렇게 생성이 불가능. 컴파일 에러 발생!
+
+
+물론 입력 매개변수들의 순서를 다르게 한 생성자를 새로 추가하는 식으로 아래 소스 같이 제한을 피해볼 수도 있으나 아주 좋지 않은 발상이다.
+    public Student(String studentID, int grade);     //가 생성된 상태에서
+    public Student(int ...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
