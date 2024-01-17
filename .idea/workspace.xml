@@ -6,19 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b6ddf2b0-d6e8-4a78-b25d-bb9d7b1911b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/data/search.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/data/swcache.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/dist/categories.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/dist/commons.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/dist/home.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/dist/misc.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/dist/page.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/dist/post.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/dist/pvreport.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/pwa/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/pwa/sw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/pwa/unregister.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705496642317</updated>
       <workItem from="1705496644964" duration="161000" />
-      <workItem from="1705496816826" duration="1833000" />
+      <workItem from="1705496816826" duration="3385000" />
     </task>
     <servers />
   </component>
