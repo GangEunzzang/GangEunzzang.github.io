@@ -5,7 +5,7 @@ categories: [java, effective-java]
 tags:
   [
     java, 
-    effective-java
+    effective-java,
     자바, 
     이펙티브자바,
     factory-method, 
