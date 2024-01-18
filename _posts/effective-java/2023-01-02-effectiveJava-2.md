@@ -5,11 +5,11 @@ categories: [java, effective-java]
 tags:
   [
     java, 
-    effective-java
+    effective-java,
     자바, 
     이펙티브자바,
     factory-method, 
-    빌더패턴.
+    빌더패턴,
     Builder
   ]
 ---
