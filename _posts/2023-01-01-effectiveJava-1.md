@@ -257,7 +257,7 @@ new 연산자가 아닌 **<span style="color:red">리터럴("")</span>로 String
 
 구글링 중 너무 이미지로 잘 정리해주신 [by hyeraan님의 글](https://hyeran-story.tistory.com/123)이 있어 공유합니다.
 
-![constrantPool](/assets\img/constrantPool.PNG)
+![constrantPool](/assets/img/constrantPool.PNG)
 
 #### 3. 반환 타입의 하위 객체를 반환할 수 있는 능력이 있다.
 반환할 객체의 클래스를 자유롭게 선택할 수 있게하는 유연성이 있다.
