@@ -206,6 +206,25 @@ getVeryExpensiveValue가 많은 연산을 필요로 하지 않는다면 불필�
    2-2. number가 0미만인 경우, 출력 후 종료 (getVeryExpensiveValue 수행하지 않음)
 
 
+### 3. Enum 방식의 싱글턴
+직렬화/역직렬화 할 때 코딩으로 문제를 해결할 필요도 없고, 리플렉션으로 호출되는 문제도 고민할 필요도 없고, 코드도 간결한 방법이 있다.
+```java
+public enum Singleton3 {
+    INSTANCE;
+
+    public String getNmae(){
+        return "Ara";
+    }
+}
+```
+위 처럼 선언한 뒤 객체를 가져올 때 아래와 같이 가져다 쓰면 된다.
+```java
+String name = Singleton3.INSTANCE.getNmae();
+```
+코드는 좀 불편하게 느껴지지만 싱글턴을 구현하는 최선의 방법이다. 하지만 이 방법은 Enum말고 다른 상위 클래스를 상속해야한다면 사용할 수 없다. 그러나 인터페이스는 구현할 수 있다.
+   
+
+
 ### 참고
 - [ITEM 3: Singleton](https://dahye-jeong.gitbook.io/java/java/effective_java/2021-01-14-singleton)
 - [[이팩티브 자바] #3 싱글톤을 만드는 여러가지 방법 그중에 최선은?](https://www.youtube.com/watch?v=xBVPChbtUhM&t=534s)
