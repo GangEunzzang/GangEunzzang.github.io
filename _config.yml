@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
   공부 정리 및 끄적끄적
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://gangeunzzang.github.io"
+url: 'https://gangeunzzang.github.io'
 
 github:
   username: GangEunZzang # change to your github username
