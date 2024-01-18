@@ -4,12 +4,12 @@ date: 2023-01-01 23:30:00 +09:00
 categories: [java, effective-java]
 tags:
   [
-java, 
-effective-java
-자바, 
-이펙티브자바,
-factory-method, 
-팩토리메서드
+    java, 
+    effective-java
+    자바, 
+    이펙티브자바,
+    factory-method, 
+    팩토리메서드
   ]
 ---
 
