@@ -1,5 +1,5 @@
 ---
-title: [기술 면접] Java 정리
+title: (기술면접) - Java
 date: 2023-10-01 23:30:00 +09:00
 categories: [tech-interview]
 tags:
