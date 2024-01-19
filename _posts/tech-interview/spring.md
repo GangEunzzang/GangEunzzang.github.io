@@ -1,7 +1,7 @@
 ---
 title: (기술면접) - Spring
 date: 2023-10-03 23:30:00 +09:00
-categories: [tech-interview]
+categories: [기술면접, 스프링]
 tags:
   [
      기술면접,
