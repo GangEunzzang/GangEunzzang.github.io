@@ -1,7 +1,7 @@
 ---
 title: (기술면접) - network
 date: 2023-10-02 23:30:00 +09:00
-categories: [tech-interview]
+categories: [기술면접, 네트워크]
 tags:
   [
      기술면접,
