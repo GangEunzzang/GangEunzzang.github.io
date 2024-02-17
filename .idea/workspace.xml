@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6ddf2b0-d6e8-4a78-b25d-bb9d7b1911b0" name="Changes" comment="">
+    <list default="true" id="b6ddf2b0-d6e8-4a78-b25d-bb9d7b1911b0" name="Changes" comment="모던자바인액션">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/tech-interview/2023-10-03-spring.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/tech-interview/2023-10-03-spring.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/posts/effective1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/posts/effective1/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GangEunzzang&quot;
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="cdc324b8-a101-45da-81a8-5898d07f71f2" />
+        <option name="url" value="git@github.com:GangEunzzang/GangEunzzang.github.io.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,8 +50,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/igang-eun/Desktop/spring/GangEunzzang.github.io/assets/img",
+    "last_opened_file_path": "/Users/igang-eun/Desktop/spring/GangEunzzang.github.io",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -43,11 +61,15 @@
     "node.js.selected.package.stylelint": "/Users/igang-eun/Desktop/spring/GangEunzzang.github.io/node_modules/stylelint",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts/modern-java-in-action" />
+      <recent name="$PROJECT_DIR$/_posts/effective-java" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/img" />
       <recent name="$PROJECT_DIR$/assets" />
     </key>
@@ -71,11 +93,56 @@
       <option name="presentableId" value="Default" />
       <updated>1705496642317</updated>
       <workItem from="1705496644964" duration="161000" />
-      <workItem from="1705496816826" duration="3385000" />
+      <workItem from="1705496816826" duration="6721000" />
+      <workItem from="1708172742335" duration="78000" />
+      <workItem from="1708172834022" duration="17000" />
+      <workItem from="1708172855114" duration="3000" />
+      <workItem from="1708176983138" duration="146000" />
     </task>
+    <task id="LOCAL-00001" summary="이펙티브자바 16~24">
+      <option name="closed" value="true" />
+      <created>1705576510640</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705576510640</updated>
+    </task>
+    <task id="LOCAL-00002" summary="모던자바인액션">
+      <option name="closed" value="true" />
+      <created>1705576768378</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705576768378</updated>
+    </task>
+    <task id="LOCAL-00003" summary="모던자바인액션">
+      <option name="closed" value="true" />
+      <created>1705576981740</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705576981740</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="이펙티브자바 16~24" />
+    <MESSAGE value="모던자바인액션" />
+    <option name="LAST_COMMIT_MESSAGE" value="모던자바인액션" />
   </component>
 </project>
