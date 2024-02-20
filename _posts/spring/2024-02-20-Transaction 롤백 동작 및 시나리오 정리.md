@@ -1,14 +1,15 @@
 ---
 title: "@Transaction 롤백 동작 및 시나리오 정리"
 date: 2024-02-20 23:30:00 +09:00
-categories:
-  - spring
+categories: [spring]
 tags:
-  - java
-  - transaction
-  - 트랜잭션
-  - Spring
-  - 스프링
+  [
+  java,
+  transaction,
+  트랜잭션,
+  Spring,
+  스프링
+]
 ---
 
 
