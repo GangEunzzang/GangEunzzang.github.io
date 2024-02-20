@@ -1,23 +1,24 @@
 ---
-title: @Transaction 롤백 동작 및 시나리오 정리
-date: 2024-02-20 23:30:00 +09:00
+title: Transaction 롤백 동작 및 시나리오 정리
+date: 2024-02-19 23:30:00 +09:00
 categories: [spring]
 tags:
   [
-  java,
-  transaction,
-  트랜잭션,
-  Spring,
-  스프링
-]
+    java,
+    transaction,
+    트랜잭션,
+    Spring,
+    스프링
+  ]
 ---
 
+* * *
 
 Unchecked Exception 발생 시에는 롤백 되지만,  
 Checked Exception 발생 시에는 롤백되지 않는건 유명한 정보이다.  
 하지만 예외를 catch 했을때 어떤식으로 처리가 되는지는 햇갈려서 케이스별로 정리해 보려고 한다. 
 
-![[transaction_progation.PNG]]
+![transaction_progation.PNG](..%2F..%2Fassets%2Fimg%2FSpring%2Ftransaction_progation.PNG)
 
 스프링에서 지원해주는 전파속성은 위와 같이 많이 존재하지만  
 실제로 자주 사용하는 REQUIRED, REQUIRES_NEW 만 정리해보겠다.
