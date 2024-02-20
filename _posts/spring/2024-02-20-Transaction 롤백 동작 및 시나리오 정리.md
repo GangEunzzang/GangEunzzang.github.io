@@ -1,5 +1,5 @@
 ---
-title: "@Transaction 롤백 동작 및 시나리오 정리"
+title: @Transaction 롤백 동작 및 시나리오 정리
 date: 2024-02-20 23:30:00 +09:00
 categories: [spring]
 tags:
@@ -34,7 +34,6 @@ public void test() {
 }
 
 결과 : 롤백 안됨
-
 ```
 --- 
 
@@ -50,7 +49,6 @@ public void test() {
 }
 
 결과 : 정상 롤백
-
 ```
 --- 
 
@@ -65,7 +63,6 @@ public void test() throws Exception {
 }
 
 결과 : 롤백 안됨
-
 ```
 --- 
 <br><br>
@@ -81,7 +78,6 @@ public void test() throws Exception {
 }
 
 결과 : 롤백 안됨
-
 ```
 
 여기까진 알고있는 결과와 일치 했다.      
@@ -106,7 +102,6 @@ public void test() throws Exception {
 }
 
 결과 : 롤백 안됨
-
 ```
 
 위와 같이 예외를 잡아주면 롤백이 진행되지 않았다.  
@@ -173,8 +168,6 @@ public void test2() throws Exception {
 }
 
 결과 : 정상 롤백
-
-
 ```
 - - - 
 <br><br>
@@ -192,7 +185,6 @@ public void test2() throws Exception {
 ```java
 
 // 1번째 케이스
-
 @Transactional  
 public void test() throws Exception {  
     test2();  
@@ -209,7 +201,6 @@ public void test2() throws Exception {
 
 -------------------------------------------------------------------
 // 2번째 케이스
-
 @Transactional  
 public void test() throws Exception {   
     boardRepository.save(Board.create());  
