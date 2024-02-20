@@ -1,6 +1,6 @@
 ---
 title: "@Transaction 롤백 동작 및 시나리오 정리"
-date: 2023-02-20 23:30:00 +09:00
+date: 2024-02-20 23:30:00 +09:00
 categories:
   - spring
 tags:
