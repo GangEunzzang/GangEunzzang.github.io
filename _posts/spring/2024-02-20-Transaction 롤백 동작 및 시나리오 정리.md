@@ -221,20 +221,110 @@ parent의 데이터는 저장되고 child는 롤백 될 거라고 예상할 수 
 
 틀렸다..
 
-위 예상은 DB 관점의 생각이고
 코드상으로는 자식의 예외가 부모까지 전파되기 때문에 둘 다 롤백이 된다.
 
 결과 : 둘 다 롤백
 
 
+-------------------------------------------------------------------
+// 3번째 케이스
+
+@Transactional  
+public void test()  {  
+    boardRepository.save(Board.builder().title("te").content("te").build()); 
+    System.out.println("em.getDelegate() = " + em.getDelegate());  
+  
+    try {  
+        test2();  
+    } catch (Exception ignored) {  
+    }  
+}  
+  
+@Transactional(propagation = Propagation.REQUIRES_NEW)  
+public void test2() {  
+    System.out.println("em.getDelegate() = " + em.getDelegate());  
+    boardRepository.save(Board.create());  
+    throw new RuntimeException();  
+}
+
+
+그럼 이번엔 자식에서 발생한 예외를 catch해보자
+
+여태까지 배웠던 지식대로면 해당 코드는
+child는 롤백되지만 parent는 정상 commit 되어야 한다.
+
+근데 위 코드를 실행해보면 둘 다 커밋이 되는걸 알수가있다.
+
+이유가 왜일까?..
+
+비밀은 프록시에 있다.
+
+eneityManager로 getDelegate 값을 찍어보면 두 메서드의 세션값이 똑같은걸 확인할 수 있다.
+
+세션값이 같다는건 트랜잭션이 같다는걸 의미한다.
+같은 Bean 내에서는 전파속성이 제대로 동작하지 않는다. (내부적으로 같은 트랜잭션범위를 같기때문에)
+
+원하는 결과를 얻기 위해선 빈을 분리해 줘야한다.
 
 
 
+-------------------------------------------------------------------
+// 4번째 케이스
+
+@Transactional  
+public void test()  {  
+    boardRepository.save(Board.builder().title("te").content("te").build()); 
+    System.out.println("em.getDelegate() = " + em.getDelegate());  
+  
+    try {  
+		testService2.test2();
+    } catch (Exception ignored) {  
+    }  
+}  
+
+ 
+public class TestService2 {  
+    @Transactional(propagation = Propagation.REQUIRES_NEW)  
+    public void test2() {  
+        boardRepository.save(Board.create());  
+        System.out.println("em.getDelegate() = " + em.getDelegate());  
+        throw new RuntimeException();
+    }  
+}
+
+이런식으로 해주면 원하는대로 parent은 commit되고
+child는 rollback되는걸 확인할 수 있다.
 ```
 - - - 
 <br><br>
+### 부모: UnCheckedException
+
+```java
+
+자식 코드는 아래와 같이 고정이다.
+@Transactional(propagation = Propagation.REQUIRES_NEW)  
+public void test2() {  
+    boardRepository.save(Board.create());  
+}
+
+@Transactional  
+public void test()  {  
+    boardRepository.save(Board.builder().title("te").content("te").build());  
+     testService2.test2();  
+    throw new RuntimeException();
+}
+
+parent: rollback
+child: commit
+
+독립적인 트랜잭션으로 동작하는걸 확인할 수 있다.
+
+```
 
 
+CheckedException은 따로 테스트를 진행하지 않겠습니다.     
+CheckedException의 기본 rollback은 옵션은 false 이며,    
+예외 발생시 롤백을 원한다면 @Transactional 어노테이션의 rollbackFor 옵션을 주면 됩니다.
 
 
 ### 참고
