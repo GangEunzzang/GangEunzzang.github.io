@@ -527,6 +527,7 @@ class User {
 
 
 ## 참고
-https://inpa.tistory.com/entry/GOF-💠-전략Strategy-패턴-제대로-배워보자   
+
+* [전략 패턴 정리 ](https://inpa.tistory.com/entry/GOF-💠-전략Strategy-패턴-제대로-배워보자)   
 
 
