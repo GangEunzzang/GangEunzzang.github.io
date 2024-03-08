@@ -1,7 +1,7 @@
 ---
 title: 디자인 패턴 정리
 date: 2024-01-05 23:30:00 +09:00
-categories: [java]
+categories: [java, Design Pattern]
 tags:
   [
     java, 
