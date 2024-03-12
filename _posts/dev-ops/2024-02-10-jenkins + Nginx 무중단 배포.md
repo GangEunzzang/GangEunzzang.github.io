@@ -173,7 +173,7 @@ Nginx가 잘 구동중인지 확인해봅니다.
 
 자신의 퍼블릭IPv4 주소 입력후 아래와 같은 화면이 보이면 NginX서버가 제대로 실행이 되고있음을 알 수 있습니다.  
 
-![NginX.png](..%2F..%2Fassets%2Fimg%2FdevOps%2FNginX.png)
+![NginX.png](..%2F..%2Fassets%2Fimg%2FdevOps%2FnginX.png)
 
 
 ### 📌 설정
