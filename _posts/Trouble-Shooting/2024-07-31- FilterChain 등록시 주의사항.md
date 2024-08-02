@@ -70,7 +70,7 @@ default Filter Chain은 거치게 되어서 문제가 발생했다.
 
 <br><br>
 
-### 마치며
+## ✅ 마치며
 * FilterChain의 동작과정에 대해 다시 한번 공부할 수 있는 기회였다.
 
 
