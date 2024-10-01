@@ -96,6 +96,43 @@ scrape_configs:
 
 <br>
 
+### 📌 lock
+* 오픈소스 로그 수집 및 분석 도구로, 로그를 수집하고 저장하는데 사용된다.
+* 프로메테우스와 함께 사용하여 로그와 메트릭을 함께 사용하여 시각화 할 수 있다.
+* 로그를 수집하고 저장하는데 사용된다.
+* 로그를 저장할 수 있는 HTTP API를 제공한다. (http://localhost:3100/loki/api/v1/push)
+* Loki데이터 저장소에서 LogQL을 사용하여 데이터 조회할 수 있다.
+
+<br>
+
+### 📌 Promtail
+* Loki에 로그를 전송하는 에이전트로, 로그를 수집하고 Loki에 전송하는데 사용된다.
+
+<br>
+
+### 📌 총정리
+* Prometheus : 메트릭 수집 및 저장
+* Grafana : 메트릭 시각화
+* Loki : 로그 수집 및 저장
+* Promtail : 로그 수집 및 Loki 전송
+
+간략한 흐름은 다음과 같다.
+```text
+1. Prometheus가 JVM의 매트릭을 수집한다. `(http://localhost:8080/actuator/prometheus)` -> application.yml 에서 endPoint 설정 가능 
+ * 톰캣 메트릭드 수집 가능 (yml에서 열어줘야함)
+ 
+2. Prometheus가 Node Exporter의 매트릭을 수집한다. `(http://localhost:9100/metrics)` -> 이 글에서 다루진 않지만, EC2 서버의 매트릭도 수집 가능
+
+3. Protail이 LogBack의 로그를 수집하여 Loki에 전송한다. `(http://localhost:3100/loki/api/v1/push)`
+
+4. Loki가 LogQL을 사용하여 로그를 저장하고 쿼리한다.
+
+5. Grafana가 Prometheus와 Loki를 통해 데이터를 시각화한다.
+```
+
+위와 같이 명확하게 역할이 분리되어 있다.
+
+<br><br>
 
 ## ✅ 모니터링 시스템 구축하기
 
@@ -120,6 +157,7 @@ ENTRYPOINT ["java", "-jar", "moneyMinder.jar"]
 ```
 
 * Spring DockerFile 생성
+* DockerFile의 최적화를 진행하지 않았는데, 최적화를 진행하면 이미지 크기 및 빌드 시간을 줄일 수 있다.
 
 <br>
 
@@ -409,7 +447,8 @@ jobs:
 <br>
 
 #### Connection DataSource 생성
-* Home -> Connection -> Data Sources -> Add new Data Source  
+* Home -> Connection -> Data Sources -> Add new Data Source    
+
 > Prometheus 선택 후 URL 입력 `http://prometheus:9090`  Save & Test 클릭
 
 > Loki 선택 후 URL 입력 `http://loki:3100`  Save & Test 클릭
@@ -417,7 +456,8 @@ jobs:
 <br> 
 
 #### Dashboards 생성
-* Home -> Dashboards -> New > import 
+* Home -> Dashboards -> New > import   
+
 >  4701 입력 후 `Load` 클릭 -> `Prometheus` 선택 후 `Import` 클릭
 
 >  17139 입력 후 `Load` 클릭 -> `Loki` 선택 후 `Import` 클릭
