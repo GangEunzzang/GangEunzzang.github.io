@@ -1,7 +1,7 @@
 ---
 title: 서버 모니터링 구축[Docker, Prometheus, Grafana, Loki]
 date: 2024-08-05 15:30:00 +09:00
-categories: [dev-ops, infra, monitoring]
+categories: [dev-ops, infra]
 tags:
   [
     도커,
