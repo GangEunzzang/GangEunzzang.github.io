@@ -35,10 +35,12 @@ tags:
 
 <br>
 
-### 📌 장애의 단서
+### 📌 장애 단서
 
 1. 에러로그
+
 ```text
+
 1. SQL Error: 0, SQLState: null
 
 2. org.hibernate.engine.jdbc.spi.SqlExceptionHelper - HikariPool-1 - Connection is not available, request timed out after 30002ms.
@@ -47,14 +49,15 @@ tags:
    java.util.concurrent.CompletionException: org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
 
 4. HikariPool-1 - Connection is not available, request timed out after 949905ms.
+
 ```
 
 <br>
 
 
-### 📌 접근
+## ✅ 접근
 
-1. `HikariCP DeadLock` 의심  
+### 📌 HikariCP DeadLock 의심  
 - HikariCP + JPA (GenerationType.SEQUENCE, AUTO) 사용 시 DeadLock 발생 가능성이 있습니다.
 - 메시지 1개를 저장하는데 한 Transaction에서 동시에 Connection 2개를 사용하면서 HikariCP DeadLock이 발생할 수 있습니다.
 
@@ -100,7 +103,7 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 
 <br>
 
-2. `병목지점 분석`
+### 📌  병목지점 분석
 
 아래는 실제 `Thread Dump` 에서 확인된 `Thread`의 상태입니다.
 
@@ -115,7 +118,9 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 ```
 <br>
 
-`TbStream readMsg`
+각 메서드를 살펴보겠습니다.
+
+1. `TbStream readMsg`
 ```java
     public TbMsg readMsg() throws SQLException {
         TbMsg var1 = null;
@@ -147,7 +152,7 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 
 <br>
 
-`TbConnection.isValid `
+2. `TbConnection.isValid `
 ```java
     public boolean isValid(int var1) throws SQLException {
         if (!this.isClosed() && this.dbComm != null) {
@@ -187,7 +192,7 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 
 <br>
 
-`PoolBase.isConnectionAlive`
+3. `PoolBase.isConnectionAlive`
 ```java
     boolean isConnectionAlive(Connection connection) {
   try {
@@ -245,7 +250,7 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 
 <br>
 
-`HikariPool.getConnection`
+4. `HikariPool.getConnection`
 ```java
     public Connection getConnection(long hardTimeout) throws SQLException {
   this.suspendResumeLock.acquire();
@@ -346,7 +351,7 @@ Application         <->            HikariCP         <->        Tibero
 
 <br><br>
 
-## ✅ 마치며-
+## ✅ 마치며
 - `Tibero`와 `HikariCP`의 호환성 문제로 발생한 이슈였습니다.
 - 에러를 표면적으로 해결하는것보다 근본적인 원인을 분석하여 해결하는 것이 중요하다는 것을 다시한번 깨달았습니다.
 
