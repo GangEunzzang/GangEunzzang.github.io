@@ -1,4 +1,4 @@
-`---
+---
 title: [HikariCP + Tibero] Network Timeout 해결하기
 date: 2024-11-14 10:30:00 +09:00
 categories: [Trouble-Shooting]
