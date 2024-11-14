@@ -120,7 +120,7 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 
 각 메서드를 살펴보겠습니다.
 
-1. `TbStream readMsg`
+#### `TbStream readMsg`
 ```java
     public TbMsg readMsg() throws SQLException {
         TbMsg var1 = null;
@@ -152,7 +152,7 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 
 <br>
 
-2. `TbConnection.isValid `
+#### `TbConnection.isValid `
 ```java
     public boolean isValid(int var1) throws SQLException {
         if (!this.isClosed() && this.dbComm != null) {
@@ -192,7 +192,7 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 
 <br>
 
-3. `PoolBase.isConnectionAlive`
+#### `PoolBase.isConnectionAlive`
 ```java
     boolean isConnectionAlive(Connection connection) {
   try {
@@ -250,7 +250,7 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 
 <br>
 
-4. `HikariPool.getConnection`
+#### `HikariPool.getConnection`
 ```java
     public Connection getConnection(long hardTimeout) throws SQLException {
   this.suspendResumeLock.acquire();
@@ -288,9 +288,11 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
   }
 }
 ```
-- `HikariPool.getConnection` 메서드는 `HikariCP` 내부에서 사용되는 메서드로, `Connection`을 획득하는 역할을 합니다.
+- `HikariPool.getConnection` 메서드는 `HikariCP` 내부에서 사용되는 메서드로, `Connection`을 획득하는 역할을 합니다.  
 
-위와 같은 메서드들을 통해 다음과 같은 흐름을 예상 할 수 있습니다.
+<br>
+
+위 메서드들을 다음과 같이 동작됩니다.
 ```text
 1. HikariPool.getConnection
  - Pool에서 Connection을 가져오고 유효성을 검사
@@ -338,7 +340,7 @@ Application         <->            HikariCP         <->        Tibero
              Connection Timeout                Network Timeout
 ```
 
-위 부분에서 `Network Timeout` 부분을 명시적으로 적어주지 않으니, 단순히 DB의 응답만을 기다리며
+위 부분에서 `Network Timeout` 부분을 명시적으로 적어주지 않으니, 단순히 DB의 응답만을 기다리며  
 `Max-lifeTime`이 발생할 때까지 기다리는 문제가 발생했던 이슈입니다. 
 
 
@@ -347,7 +349,7 @@ Application         <->            HikariCP         <->        Tibero
 
 ## ✅ 해결
 
-- `Connection`의 `Max-lifeTime`을 DB 세션 유지 시간보다 적게 설정해주어서 `Network Timeout`이 발생할 수 있는 조건을 배제했습니다.
+- `Connection`의 `Maximum-lifeTime`을 DB 세션 유지 시간보다 적게 설정해주어서 `Network Timeout`이 발생할 수 있는 조건을 배제했습니다.
 
 <br><br>
 
