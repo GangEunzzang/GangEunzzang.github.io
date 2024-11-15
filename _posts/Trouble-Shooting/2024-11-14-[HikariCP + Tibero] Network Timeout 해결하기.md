@@ -12,7 +12,7 @@ tags:
 
 * * *
 
-이 글은 간혈적으로 발생하던, `Tibero Connection`의 `Network Timeout ` 이슈로 문제 정의부터 해결까지의 과정을 담았습니다.
+이 글은 간혈적으로 발생하던, `Tibero Connection`의 `Network Timeout ` 이슈로 문제 정의부터 해결한 과정을 담았습니다.
 
 ## ✅ 개발 환경
 - `SpringBoot 2.6.2`
@@ -20,6 +20,7 @@ tags:
 - `HikariCP 4.0.3`
 - `Java 8`
 
+***
 <br>
 
 
@@ -27,7 +28,7 @@ tags:
 
 ### 📌 증상
 서비스에서 간헐적으로 DB 연결 대기가 15분 이상 지속됐습니다.   
-이 문제는 단순한 타임아웃 문제를 넘어 커넥션 점유와 성능 저하로 이어졌습니다.
+이는 단순한 타임아웃 문제를 넘어 커넥션 점유와 성능 저하로 이어졌습니다.
 
 ![img.png](../../assets/img/img.png)
 ![img_1.png](..%2F..%2Fassets%2Fimg%2Fimg_1.png)
@@ -35,9 +36,7 @@ tags:
 
 <br>
 
-### 📌 장애 단서
-
-1. 에러로그
+### 📌 에러 로그
 
 ```text
 
@@ -51,14 +50,14 @@ tags:
 4. HikariPool-1 - Connection is not available, request timed out after 949905ms.
 
 ```
-
+***
 <br>
 
 
 ## ✅ 접근
 
 ### 📌 HikariCP DeadLock 의심  
-- HikariCP + JPA (GenerationType.SEQUENCE, AUTO) 사용 시 DeadLock 발생 가능성이 있습니다.
+- 초기에 HikariCP와 JPA의 `GenerationType.SEQUENCE` 사용 중 DeadLock 가능성을 의심했습니다.
 - 메시지 1개를 저장하는데 한 Transaction에서 동시에 Connection 2개를 사용하면서 HikariCP DeadLock이 발생할 수 있습니다.
 
 
@@ -99,13 +98,13 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 
 위와 같은 시나리오로 Dead Lock이 발생할 수 있습니다.
 
-하지만 저희는 `Dead Lock` 회피하기 위한 Maximum Pool Size 가 충족되기 때문에 `Dead Lock`은 아니라고 판단했습니다.
+하지만 저희는 `Dead Lock` 회피하기 위한 `Maximum Pool Size` 가 충분히 설정했기 때문에 `Dead Lock`은 아니라고 판단했습니다.
 
 <br>
 
 ### 📌  병목지점 분석
 
-아래는 실제 `Thread Dump` 에서 확인된 `Thread`의 상태입니다.
+`Thread Dump`를 확인한 결과 대부분의 스레드가 Tibero JDBC 드라이버의 `TbStream.readMsg` 메서드에서 멈춰 있는 상태를 확인했습니다.
 
 ```text
 "checker-executor-4" - Thread t@31
@@ -309,8 +308,16 @@ Connection 개수가 2개라고 가정할 때 다음과 같은 시나리오로 D
 
 ```
 
-즉, Connection 을 정상적으로 가져왔지만 DB와의 통신 과정에서 응답 지연이 발생하므로,
-네트워크 병목을 의심했습니다.
+<br>
+
+### 📌 분석 결과
+1. HikariCP가 커넥션을 가져오는 과정에서 `PoolBase.isConnectionAlive` 호출하여 커넥션 상태를 검증합니다.
+2. 검증 중 `TbConnection.isValid` 메서드가 호출되며 Tibero와의 네트워크 통신을 수행합니다.
+3. 네트워크 응답 지연으로 인해 스레드가 대기 상태에 빠집니다.
+
+<br>
+
+### 📌추가 단서
 
 그러던 중 이상한 로그를 발견했습니다.
 
@@ -330,27 +337,48 @@ com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set
 - 위 메서드는 `JDBC 4.1`에 추가된 메서드로, `Connection` 객체에 대한 네트워크 타임아웃을 설정하고 조회하는 메서드입니다.  
 - `Tibero 6.0`은 `JDBC 4.0`을 지원하므로 해당 메서드를 지원하지 않습니다.
 
+
+<br>
+
 즉, 정리하면 다음과 같은 문제가 발생했습니다.
 
 ```text
-<br> 
 
-```text
 Application         <->            HikariCP         <->        Tibero
              Connection Timeout                Network Timeout
+             
 ```
 
-위 부분에서 `Network Timeout` 부분을 명시적으로 적어주지 않으니, 단순히 DB의 응답만을 기다리며  
-`Max-lifeTime`이 발생할 때까지 기다리는 문제가 발생했던 이슈입니다. 
+* HikariCP는 기본적으로 이 메서드를 사용해 네트워크 타임아웃을 설정하려 하지만, Tibero 드라이버가 이를 지원하지 않아 HikariCP가 네트워크 대기 상태를 관리하지 못하여 발생한 이슈입니다.
 
 
-
+***
 <br> <br>
 
 ## ✅ 해결
 
-- `Connection`의 `Maximum-lifeTime`을 DB 세션 유지 시간보다 적게 설정해주어서 `Network Timeout`이 발생할 수 있는 조건을 배제했습니다.
+### 📌HikariCP 설정 변경
 
+1. HikariCP 설정 수정
+```yaml
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 30000  # 최대 30초 대기
+      idle-timeout: 600000       # 최대 10분 유휴 상태
+      max-lifetime: 1800000      # 커넥션 최대 생존 시간 30분
+```
+* DB 세션 타임아웃보다 짧은 `max-lifetime`를 설정하여 문제가 되는 연결이 Pool에 오래 남아있지 않도록 했습니다.
+
+
+2. 드라이버 업데이트
+* Tibero 7.2로 업데이트시 JDBC 4.1 기능 지원 
+
+
+<br>
+저는 1번 방법으로 문제를 해결했습니다. DB의 세션 만료시간을 조회 후 `max-lifetime`을 세션 만료시간보다 작게 설정했습니다.
+
+***
 <br><br>
 
 ## ✅ 마치며
