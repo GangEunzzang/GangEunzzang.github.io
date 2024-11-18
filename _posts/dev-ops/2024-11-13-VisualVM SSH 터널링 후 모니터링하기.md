@@ -51,6 +51,7 @@ VisualVM을 사용하여 SSH 터널링을 설정하고, 원격 서버의 JVM을 
 ssh -L 9010:localhost:9010 [ID@HOST]
 ```
 * 위와 같이 설정하면 로컬 9010 포트로 접속하면 원격 서버의 9010 포트로 연결됩니다.
+* 윈도우는 PowerShell/ Mac은 Terminal을 사용하여 명령어 실행해주시면 됩니다.
 
 <br>
 
