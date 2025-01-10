@@ -240,6 +240,53 @@ public void purchaseTicketWithRetry(Long ticketId, int quantity, int maxRetries,
 * 작업이 끝난 후, 락의 값(lockValue)을 확인하여 현재 클라이언트가 락 소유자인 경우에만 해제
 * 다른 클라이언트가 락을 잘못 해제하지 못하도록 방지할 수 있다.
 
+<br>
+
+### 📌 문제점
+`1. Spin Lock 방식이라 Redis에 부하가 많이 간다.`
+
+```java
+    @Test
+    void testConcurrentTicketPurchase() throws InterruptedException {
+        // Given
+        Long ticketId = 1L;
+        int threads = 50; // 50개의 스레드에서 동시에 티켓 구매 시도
+        int purchaseQuantity = 1;
+
+        // 스레드 풀과 CountDownLatch 설정
+        ExecutorService executorService = Executors.newFixedThreadPool(threads);
+        CountDownLatch latch = new CountDownLatch(threads);
+
+        // When
+        for (int i = 0; i < threads; i++) {
+            executorService.execute(() -> {
+                try {
+                    ticketService.purchaseTicketWithRetry(ticketId, purchaseQuantity);
+                } catch (RuntimeException | InterruptedException ignored) {
+                } finally {
+                    latch.countDown();
+                }
+            });
+        }
+
+        // 모든 스레드가 작업을 끝낼 때까지 대기
+        latch.await();
+        executorService.shutdown();
+
+        // Then
+        // 티켓 수량이 정확히 감소되었는지 확인
+        Ticket ticket = ticketRepository.findById(ticketId).orElseThrow();
+        assertThat(ticket.getQuantity()).isEqualTo(100 - threads);
+    }
+
+```
+
+실제로 위와같은 테스트코드를 실행하며 Redis 내부에 얼마나 많은 요청이 가나 확인해봤더니  
+평균적으로 850번 정도의 부하가 걸린다.
+
+이는 싱글스레드로 동작하는 Redis의 특성상 많은 문제를 야기할 수 있다.
+
+
 <br><br>
 
 ## ✅ 분산락 주의사항
