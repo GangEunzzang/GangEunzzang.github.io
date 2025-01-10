@@ -245,9 +245,11 @@ public void purchaseTicketWithRetry(Long ticketId, int quantity, int maxRetries,
 ## ✅ 분산락 주의사항
 `1. 락 만료 시간 관리`
    * 작업 시간이 설정된 락의 만료 시간을 초과할 경우, 다른 클라이언트가 락을 획득할 수 있어 데이터 불일치가 발생할 수 있다.
-   * 이를 방지하려면 작업 진행 중 주기적으로 락의 TTL을 갱신하는 방식(예: Watchdog)을 고려할 수 있다.
+   * 이를 방지하려면 작업 진행 중 주기적으로 락의 TTL을 갱신하는 방식(예: Watchdog)을 고려할 수 있다.  
+
 `2. 락 해제 검증`
-   * releaseLock에서 현재 클라이언트가 락의 소유자인지 확인하는 로직이 필요합니다. Redis 트랜잭션을 사용하여 원자성을 보장하는 것이 좋다.
+   * releaseLock에서 현재 클라이언트가 락의 소유자인지 확인하는 로직이 필요하다. Redis 트랜잭션을 사용하여 원자성을 보장하는 것이 좋다.
+
 `3. Redis 분산락 대안`
    * 보다 안전한 분산락 구현을 위해 Redisson이나 ZooKeeper와 같은 라이브러리를 사용할 수 있다.
    * 특히 Redisson은 Redis의 Lua 스크립트를 사용하여 락의 원자성과 만료 시간 관리를 개선한 구현체를 제공한다.
