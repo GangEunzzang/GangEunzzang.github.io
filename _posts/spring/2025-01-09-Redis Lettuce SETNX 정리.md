@@ -242,8 +242,9 @@ public void purchaseTicketWithRetry(Long ticketId, int quantity, int maxRetries,
 
 <br>
 
-### 📌 문제점
-`1. Spin Lock 방식이라 Redis에 부하가 많이 간다.`
+## ✅ 문제점
+
+### 📌 Spin Lock 부하 문제
 
 ```java
     @Test
@@ -286,6 +287,195 @@ public void purchaseTicketWithRetry(Long ticketId, int quantity, int maxRetries,
 
 이는 싱글스레드로 동작하는 Redis의 특성상 많은 문제를 야기할 수 있다.
 
+<br> 
+
+#### 해결방법
+
+1. `백 오프 알고리즘(Exponential Backoff)`을 적용하여 재시도 간격을 점차 증가시키는 방법
+
+```java
+int attempts = 0;
+int maxAttempts = 10;
+long delay = 100; // 초기 딜레이 100ms
+
+while (attempts < maxAttempts) {
+    if (redisLockService.acquireLock(key, value, timeout)) {
+        try {
+            // 작업 수행
+        } finally {
+            redisLockService.releaseLock(key, value);
+        }
+        break;
+    }
+
+    // 지수 백오프
+    Thread.sleep(delay);
+    delay *= 2; // 딜레이 증가
+    attempts++;
+}
+
+```
+
+위와 같이 재시도 간격을 점점 증가시키면 Redis에 대한 부하를 줄일 수 있다.
+
+2. `Redisson`과 같은 Redis 분산락 라이브러리 사용
+
+* Redisson은 Redis의 Lua 스크립트를 사용하여 락의 원자성과 만료 시간 관리를 개선한 구현체를 제공한다.
+* 락의 만료 시간을 주기적으로 갱신하거나, 락의 소유 여부를 확인하는 로직을 개선할 수 있다.
+
+위 글은 Redisson 라이브러리가 아닌 Lettuce을 설명하기 위한 글이라 자세한 설명은 생각하겠슴당..
+
+<br>
+
+
+### 📌 SETNX 동작 한계
+
+* SETNX는 단순히 키가 존재하지 않을때만 값을 설정하기 때문에  `락의 TTL(Time To Live)`와 같은 기능을 직접 구현해야 한다.
+* 락 만료 시간이 설정되지 않을 경우, 락을 획득한 클라이언트가 작업을 완료하지 않고 종료될 경우, 락이 영원히 유지될 수 있다.
+
+Redis 모니터링 후 실제 나간 명령어를 보면 다음과 같다.
+
+```text 
+ "SET" "ticket:1" "81e45ede-8410-410b-8f9f-712569d0e085" "EX" "10" "NX"
+```
+
+```bash
+ SET {KEY} {VALUE} EX {TIMEOUT} NX
+```
+
+* `NX`: 키가 존재하지 않을 때만 설정
+* `EX`: 만료 시간을 초 단위로 설정
+
+위 명령어를 기반으로 락 설정과 TTL 설정을 하나의 명령으로 처리하므로 SETNX보다 안전하게 관리할 수 있다.
+
+<br>
+
+### 📌 락 해제시 Race Condition 문제
+현재 `releaseLock` 메서드는 락의 소유 여부를 확인한 후 키를 삭제하는 두 단계로 이루어져 있다.
+
+```java
+    public void releaseLock(String key, String value) {
+        String currentValue = redisTemplate.opsForValue().get(key);
+        if (value.equals(currentValue)) {
+            redisTemplate.delete(key);
+        }
+```
+현재 Redis 명령어를 두 번 호출(`GET`, `DEL`)하므로, 락 해제 과정에서 다른 클라이언트가 락을 획득하는 `Race Condition` 문제가 발생할 수 있다.  
+예를 들어:
+1. 클라이언트 A가 락을 소유하고 있고, 작업이 끝나서 락을 해제하려고 함
+2. 클라이언트 A가 `GET` 명령어로 현재 값을 확인하는 순간, 락 만료로 인해 다른 클라이언트(B)가 같은 락을 생성함
+3. 클라이언트 A는 이전에 확인했던 값을 기준으로 락 소유 여부가 확인되어 `DELETE` 명령어를 실행하지만, 이미 클라이언트 B가 생성한 락을 삭제하게됨
+
+#### 해결방법
+
+위와 같은 상황을 방지하기 위해 다중 명령어의 원자성을 보장해주는 Lua 스크립트를 적용할 수 있다.
+
+```java
+    String luaScript = "if redis.call('GET', KEYS[1]) == ARGV[1] then " +
+      "return redis.call('DEL', KEYS[1]) " +
+      "else return 0 end";
+    
+    redisTemplate.execute((RedisCallback<Object>) connection ->
+      connection.eval(luaScript.getBytes(), ReturnType.INTEGER, 1,
+      key.getBytes(), value.getBytes())
+      );
+```
+
+위와 같이 Lua 스크립트를 사용하면, 실행 중간에 다른 명령이 개입할 수 없으므로, 다중 명령어의 실행 순서를 보장받을 수 있다.
+
+### 📌 TTL 갱신 로직(Watchdog)
+현재 로직에서는 TTL 갱신 로직이 없어, 처리 중일경우 락의 만료 시간을 갱신하지 않는다.  
+Watchdog은 작업이 진행 중일 경우 주기적으로 TTL을 갱신하여 락이 만료되지 않도록 보장하는 방식이다.
+
+```java
+ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+scheduler.scheduleAtFixedRate(() -> {
+  if (redisLockService.isLockHeld(lockKey, lockValue)) {
+  redisLockService.extendTTL(lockKey, 10); // TTL 10초 연장
+    }
+      }, 0, 5, TimeUnit.SECONDS);
+
+```
+
+<br>
+
+###  📌 락 획득 실패 시 처리 방식 문제
+
+현재는 락 획득 실패 시 즉시 종료하거나 재시도하는 간단한 방식만 구현되어 있다.    
+하지만, 락 획득 실패 시 어떻게 처리할지는 비즈니스 요구사항에 따라 다르다.  
+예를 들어, 락 획득 실패 시 대기하거나, 다른 작업을 수행하거나, 예외를 발생시키는 등 다양한 방식으로 처리할 수 있다.  
+
+#### 해결방법
+
+1. FallBack 처리
+* `Fallback 매커니즘`은 락 획득 실패 시, 해당 요청을 즉시 처리하지 못하는 상황에 대비하는 방식을 의미한다.
+
+1.2 Fallback 매커니즘 설계 예시
+1. `요청을 큐에 넣기`: 작업을 비동기 방식으로 처리할 수 있도록 요청을 큐(예: RabbitMQ, Kafka)에 저장
+2. `대체 동작 수행`: 실패한 작업 대신 대체 작업을 수행(예: 다른 좌석을 선택하세요 등)을 사용자에게 제공
+3. `작업 우선순위 조정`: 락 획득 실패 시, 해당 요청을 우선순위 큐에 저장하여 나중에 처리
+
+```java
+@Service
+public class TicketService {
+
+    private final RedisLockService redisLockService;
+    private final BlockingQueue<Task> fallbackQueue = new LinkedBlockingQueue<>();
+
+    public TicketService(RedisLockService redisLockService) {
+        this.redisLockService = redisLockService;
+
+        // 비동기적으로 큐의 작업을 처리하는 쓰레드
+        new Thread(() -> {
+            while (true) {
+                try {
+                    Task task = fallbackQueue.take(); // 큐에서 작업 가져오기
+                    processTask(task);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }).start();
+    }
+
+    public void purchaseTicket(Long ticketId, int quantity) {
+        String lockKey = "ticket:" + ticketId;
+        String lockValue = UUID.randomUUID().toString();
+
+        boolean lockAcquired = redisLockService.acquireLock(lockKey, lockValue, 10);
+        if (!lockAcquired) {
+            // 락 획득 실패 시 큐에 작업 추가
+            log.info("Failed to acquire lock. Adding to fallback queue...");
+            fallbackQueue.add(new Task(ticketId, quantity));
+            return;
+        }
+
+        try {
+            // 비즈니스 로직 수행
+            processPurchase(ticketId, quantity);
+        } finally {
+            redisLockService.releaseLock(lockKey, lockValue);
+        }
+    }
+
+    private void processTask(Task task) {
+        log.info("Processing fallback task: {}", task);
+        purchaseTicket(task.getTicketId(), task.getQuantity());
+    }
+}
+
+// 또는 아래와 같이 응답 핸들링
+if (!lockAcquired) {
+  log.warn("Failed to acquire lock for ticket purchase. Ticket ID: {}", ticketId);
+    throw new TicketException("현재 요청을 처리할 수 없습니다. 잠시 후 다시 시도해주세요.");
+}
+
+```
+
+위와 같은 방식은 여러 이점이 있다.
+* `작업 실패를 줄임`: 요청을 큐에 저장함으로써 작업 실패를 줄일 수 있고, 경우에 따라 처리를 보장해줄수도 있다.
+* `부하 완화`: 락 획득 실패 시, 재시도하지 않고, 큐를 통해 작업을 처리함으로써 부하를 완화할 수 있다.
+* `사용자 경험 개선`: 즉시 처리하지 못하는 작업에 대해 적절한 피드백을 제공함으로써 사용자 경험을 개선할 수 있다.
 
 <br><br>
 
