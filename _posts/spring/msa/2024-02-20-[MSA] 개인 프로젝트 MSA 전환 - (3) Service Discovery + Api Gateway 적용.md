@@ -208,10 +208,39 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
       defaultZone: http://localhost:3333/eureka
 ```
+
+<br> 
+
+### 📌 Eureka Client 확인
+
+``` text
+2025-04-18T09:08:00.818+09:00  WARN 39916 --- [discovery-server] [get_localhost-0] c.n.eureka.cluster.ReplicationTask       : The replication of task API-GATEWAY/host.docker.internal:api-gateway:3334:Cancel@localhost failed with response code 404
+2025-04-18T09:08:00.818+09:00  WARN 39916 --- [discovery-server] [get_localhost-0] c.netflix.eureka.cluster.PeerEurekaNode  : API-GATEWAY/host.docker.internal:api-gateway:3334:Cancel@localhost: missing entry.
+2025-04-18T09:08:31.661+09:00  INFO 39916 --- [discovery-server] [nio-3333-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/api-gateway:d04cac58e950189a03a45299d80e55f2 with status UP (replication=false)
+2025-04-18T09:08:32.183+09:00  INFO 39916 --- [discovery-server] [nio-3333-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/api-gateway:d04cac58e950189a03a45299d80e55f2 with status UP (replication=true)
+```
+
+서버가 정상적으로 등록되는것을 볼 수 있다.
+
+멀티 모듈 환경에서 총 4개의 서비스를 실행했습니다.  
+![img_5.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_5.png)
+
+<br>
+
+http://localhost:3333/eureka 에 접속하여 Eureka Server에 등록된 서비스들의 정보를 확인할 수 있습니다.
+
+![img_4.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_4.png)
+
+
+<br> <br>
+
+## ✅ Api Gateway
 

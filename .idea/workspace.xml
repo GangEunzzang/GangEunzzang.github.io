@@ -35,9 +35,9 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -57,7 +57,7 @@
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/UBIVELOX/Desktop/projects/GangEunzzang.github.io/_posts/dev-ops&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/UBIVELOX/Desktop/projects/GangEunzzang.github.io&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -65,6 +65,9 @@
     &quot;node.js.selected.package.stylelint&quot;: &quot;\\Users\\igang-eun\\Desktop\\spring\\GangEunzzang.github.io\\node_modules\\stylelint&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -78,14 +81,18 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\UBIVELOX\Desktop\projects\GangEunzzang.github.io\assets\img\TroubleShooting" />
-      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="C:\Users\UBIVELOX\Desktop\projects\GangEunzzang.github.io\assets\img\Spring" />
+      <recent name="C:\Users\UBIVELOX\Desktop\projects\GangEunzzang.github.io\_posts\spring\msa" />
+      <recent name="C:\Users\UBIVELOX\Desktop\projects\GangEunzzang.github.io\assets\img8" />
+      <recent name="C:\Users\UBIVELOX\Desktop\projects\GangEunzzang.github.io\assets\img4" />
+      <recent name="C:\Users\UBIVELOX\Desktop\projects\GangEunzzang.github.io\assets\img3" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -114,6 +121,28 @@
       <workItem from="1725583810520" duration="599000" />
       <workItem from="1726099703242" duration="599000" />
       <workItem from="1728262916014" duration="863000" />
+      <workItem from="1731475531471" duration="5054000" />
+      <workItem from="1731487426255" duration="164000" />
+      <workItem from="1731487601080" duration="637000" />
+      <workItem from="1731542386229" duration="13775000" />
+      <workItem from="1731660676051" duration="5039000" />
+      <workItem from="1732776497234" duration="642000" />
+      <workItem from="1734049168697" duration="582000" />
+      <workItem from="1734929908734" duration="222000" />
+      <workItem from="1734930176162" duration="24000" />
+      <workItem from="1736406252872" duration="20311000" />
+      <workItem from="1736900042952" duration="906000" />
+      <workItem from="1736985751983" duration="567000" />
+      <workItem from="1737076046872" duration="583000" />
+      <workItem from="1738571855512" duration="12651000" />
+      <workItem from="1739167688356" duration="2958000" />
+      <workItem from="1739404941512" duration="1287000" />
+      <workItem from="1740465609777" duration="72000" />
+      <workItem from="1740636213028" duration="23462000" />
+      <workItem from="1741911121676" duration="1440000" />
+      <workItem from="1742449945486" duration="35000" />
+      <workItem from="1744589609566" duration="1455000" />
+      <workItem from="1744591135338" duration="16844000" />
     </task>
     <task id="LOCAL-00001" summary="이펙티브자바 16~24">
       <option name="closed" value="true" />
