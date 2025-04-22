@@ -232,13 +232,13 @@ eureka:
 서버가 정상적으로 등록되는것을 볼 수 있다.
 
 멀티 모듈 환경에서 총 4개의 서비스를 실행했습니다.  
-![img_5.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_5.png)
+![img_5.png](../../../assets/img/img_5.png)
 
 <br>
 
 http://localhost:3333/eureka 에 접속하여 Eureka Server에 등록된 서비스들의 정보를 확인할 수 있습니다.
 
-![img_4.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_4.png)
+![img_4.png](../../../assets/img/img_4.png)
 
 
 <br> <br>
