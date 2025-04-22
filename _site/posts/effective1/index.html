@@ -10,7 +10,7 @@
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="en"
-  
+
 >
 
   <!--
@@ -21,19 +21,19 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  
 
-    
 
-    
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="Item 1 - 생성자 대신 정적 팩터리 메서드를 고려하라" />
@@ -51,7 +51,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-01T23:30:00+09:00","datePublished":"2023-01-01T23:30:00+09:00","description":"정적 팩터리 메서드의 장점 1. 이름을 가질 수 있다. 정적 팩터리 메서드는 생성자보다 읽기 편하다.","headline":"Item 1 - 생성자 대신 정적 팩터리 메서드를 고려하라","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/effective1/"},"url":"http://localhost:4000/posts/effective1/"}</script>
 <!-- End Jekyll SEO tag -->
 
-  
+
 
   <title>Item 1 - 생성자 대신 정적 팩터리 메서드를 고려하라 | 게임과 개발사이
   </title>
@@ -88,28 +88,28 @@
 <!--<meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">-->
 <!--<meta name="theme-color" content="#ffffff">-->
 
-  
 
-    
+
+
       <link rel="preconnect" href="https://fonts.googleapis.com" >
       <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
-    
+
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
-    
+
       <link rel="preconnect" href="https://fonts.googleapis.com" >
       <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
-    
+
       <link rel="preconnect" href="https://cdn.jsdelivr.net" >
       <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
-    
+
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
 
-  
+
 
   <!-- GA -->
-  
+
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -119,20 +119,20 @@
 
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css">
-  
 
-  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css">
+
+
+
     <!-- Manific Popup -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css">
-  
+
 
   <!-- JavaScript -->
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
 
-  
+
     <!--
   Switch the mode between dark and light.
 -->
@@ -263,7 +263,7 @@
 
 </script>
 
-  
+
 </head>
 
 
@@ -277,10 +277,10 @@
   <div class="profile-wrapper text-center">
     <div id="avatar">
       <a href="/" class="mx-auto">
-        
-          
+
+
           <img src="/assets/img/profile.png" alt="avatar" onerror="this.style.display='none'">
-        
+
       </a>
     </div>
 
@@ -301,133 +301,133 @@
       </a>
     </li>
     <!-- the real tabs -->
-    
+
     <li class="nav-item">
       <a href="/categories/" class="nav-link">
         <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i>
-        
+
 
         <span>CATEGORIES</span>
       </a>
     </li> <!-- .nav-item -->
-    
+
     <li class="nav-item">
       <a href="/tags/" class="nav-link">
         <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i>
-        
+
 
         <span>TAGS</span>
       </a>
     </li> <!-- .nav-item -->
-    
+
     <li class="nav-item">
       <a href="/archives/" class="nav-link">
         <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i>
-        
+
 
         <span>ARCHIVES</span>
       </a>
     </li> <!-- .nav-item -->
-    
+
     <li class="nav-item">
       <a href="/about/" class="nav-link">
         <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i>
-        
+
 
         <span>ABOUT</span>
       </a>
     </li> <!-- .nav-item -->
-    
+
 
   </ul> <!-- ul.nav.flex-column -->
 
   <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
 
-    
+
       <button class="mode-toggle btn" aria-label="Switch Mode">
         <i class="fas fa-adjust"></i>
       </button>
 
-      
+
         <span class="icon-border"></span>
-      
-    
 
-    
-      
 
-      
+
+
+
+
+
       <a href="https://github.com/GangEunZzang" aria-label="github"
-        
 
-        
+
+
           target="_blank"
-          
-        
 
-        
+
+
+
 
         rel="noopener noreferrer">
 
         <i class="fab fa-github"></i>
       </a>
-      
 
-    
-      
 
-      
+
+
+
+
       <a href="https://www.instagram.com/igangeun/" aria-label="instagram"
-        
 
-        
+
+
           target="_blank"
-          
-        
 
-        
+
+
+
 
         rel="noopener noreferrer">
 
         <i class="fab fa-instagram"></i>
       </a>
-      
 
-    
-      
 
-      
+
+
+
+
       <a href="javascript:location.href = 'mailto:' + ['rkddms123456','naver.com'].join('@')" aria-label="email"
-        
 
-        
 
-        
+
+
+
 
         >
 
         <i class="fas fa-envelope"></i>
       </a>
-      
 
-    
-      
 
-      
+
+
+
+
       <a href="/feed.xml" aria-label="rss"
-        
 
-        
 
-        
+
+
+
 
         >
 
         <i class="fas fa-rss"></i>
       </a>
-      
 
-    
+
+
 
   </div> <!-- .sidebar-bottom -->
 
@@ -442,38 +442,38 @@
   <div id="topbar" class="container d-flex align-items-center justify-content-between h-100 pl-3 pr-3 pl-md-4 pr-md-4">
     <span id="breadcrumb">
 
-    
 
-    
 
-      
 
-        
+
+
+
+
           <span>
             <a href="/">
               Home
             </a>
           </span>
 
-        
 
-      
 
-        
 
-      
 
-        
 
-          
+
+
+
+
+
+
             <span>Item 1 - 생성자 대신 정적 팩터리 메서드를 고려하라</span>
-          
 
-        
 
-      
 
-    
+
+
+
+
 
     </span><!-- endof #breadcrumb -->
 
@@ -497,7 +497,7 @@
 
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div id="main" class="container pl-xl-4 pr-xl-4">
-        
+
 
 
 
@@ -509,11 +509,11 @@
   <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4">
     <div class="post pl-1 pr-1 pl-md-2 pr-md-2">
 
-    
 
-    
-      
-      
+
+
+
+
         <!--
   Refactor the HTML structure.
 -->
@@ -543,89 +543,89 @@
 
 
 
-  
-  
+
+
 
   <!-- CDN URL -->
-  
+
 
   <!-- Add image path -->
-  
 
-  
-    
-      
-      
-    
 
-    
-    
 
-    
 
-    
-    
 
-    
-    
-    
-    
 
-    
-      
 
-      
-      
-      
 
-      
 
-    
-      
 
-      
-      
-      
 
-      
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- take out classes -->
-    
 
-    
 
-    
 
-    
+
+
+
+
 
     <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
-    
-    
+
+
 
     <!-- add image placeholder -->
-    
-      
-    
+
+
+
 
     <!-- Bypass the HTML-proofer test -->
-    
+
 
     <!-- make sure the `<img>` is wrapped by `<a>` -->
-    
 
-    
+
+
       <!-- create the image wrapper -->
-      
-    
+
+
 
     <!-- combine -->
-    
 
-  
 
-  
+
+
+
 
 
 
@@ -639,130 +639,130 @@
 
 
 
-  
-  
 
-  
 
-  
-  
 
-  
-    
-    
 
-    
-      
-        
-        
-      
 
-      
-      
 
-      
-      
-      
 
-      
 
-    
-      
 
-      
-      
 
-      
-      
-      
 
-      
 
-    
 
-    
 
-  
 
-  
-  
 
-  
-    
-    
 
-    
-      
-        
-        
-      
 
-      
-      
 
-      
-      
-      
 
-      
 
-    
-      
 
-      
-      
 
-      
-      
-      
 
-      
 
-    
-      
 
-      
-      
 
-      
-      
-      
 
-      
 
-    
 
-    
 
-  
 
-  
-  
 
-  
-    
-    
 
-    
-      
-        
-        
-      
 
-      
-      
 
-      
-      
-      
 
-      
 
-    
 
-    
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -793,7 +793,7 @@
   </span>
 
   <!-- lastmod date -->
-   
+
 
   <div class="d-flex justify-content-between">
     <!-- author(s) -->
@@ -801,15 +801,15 @@
        By
 
       <em>
-        
+
         <a href="https://github.com/GangEunZzang">GangEun</a>
-        
+
       </em>
     </span>
 
     <div>
       <!-- page views -->
-      
+
 
       <!-- read time -->
       <!--
@@ -882,7 +882,7 @@
 15
 </pre></td><td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Student</span><span class="o">{</span>
     <span class="nc">Student</span><span class="o">(</span><span class="nc">String</span> <span class="n">studentID</span><span class="o">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="o">,</span> <span class="kt">int</span> <span class="no">GPA</span><span class="o">)</span> <span class="o">{}</span>
-   
+
     <span class="kd">private</span> <span class="nc">String</span> <span class="n">studentID</span><span class="o">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">grade</span><span class="o">;</span>
     <span class="kd">private</span> <span class="kt">double</span> <span class="no">GPA</span><span class="o">;</span>
@@ -951,41 +951,41 @@
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
     <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
     <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
-   
+
     <span class="kd">public</span> <span class="nf">Foo</span><span class="o">(){</span>
     <span class="o">}</span>
-   
+
     <span class="c1">//생성자</span>
     <span class="kd">public</span> <span class="nf">Foo</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
     <span class="o">}</span>
-   
+
     <span class="c1">//생성자 - 위의 생성자랑 시그니처가 같으므로 생성 불가</span>
 <span class="c1">//  public Foo(String address) {</span>
 <span class="c1">//      this.address = address;</span>
 <span class="c1">//  }</span>
-   
+
     <span class="c1">// static 팩토리 메서드</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Foo</span> <span class="nf">withName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">){</span>
         <span class="k">return</span> <span class="k">new</span> <span class="nf">Foo</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
     <span class="o">}</span>
-   
+
     <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Foo</span> <span class="nf">withAddress</span><span class="o">(</span><span class="nc">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
         <span class="nc">Foo</span> <span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">(</span><span class="n">address</span><span class="o">);</span>
         <span class="k">return</span> <span class="n">foo</span><span class="o">;</span>
     <span class="o">}</span>
-   
+
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Foo</span> <span class="no">GOOD_NIGHT</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">();</span>
-   
+
     <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Foo</span> <span class="nf">getFoo</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="no">GOOD_NIGHT</span><span class="o">;</span><span class="c1">//객체를 아예 새로 생성하지 않고 미리 만들어놓은 것을 가져옴. 특히 생성비용이 큰 경우 성능을 상당히 끌어올려줌.</span>
     <span class="o">}</span>
-   
+
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
         <span class="c1">//장점 1: foo 코드보다는 foo2 의미가 더 읽기 편하다. Ara가 무슨 의미인지 알 수 있으므로.</span>
         <span class="nc">Foo</span> <span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">(</span><span class="s">"Ara"</span><span class="o">);</span>
         <span class="nc">Foo</span> <span class="n">foo1</span> <span class="o">=</span> <span class="nc">Foo</span><span class="o">.</span><span class="na">withName</span><span class="o">(</span><span class="s">"Ara"</span><span class="o">);</span>
-       
+
         <span class="c1">//장점 2: 반드시 새로운 객체를 만들 필요가 없다. 플라이웨이트 패턴도 이와 비슷한 기법임.</span>
         <span class="nc">Foo</span> <span class="n">foo2</span> <span class="o">=</span> <span class="nc">Foo</span><span class="o">.</span><span class="na">getFoo</span><span class="o">();</span>
     <span class="o">}</span>
@@ -1056,8 +1056,8 @@
   <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Settings</span> <span class="o">{</span>
 
       <span class="kd">private</span> <span class="nf">Settings</span><span class="o">()</span> <span class="o">{};</span><span class="c1">//private: Settings 클래스에서만 사용 가능. 외부 클래스에서 사용하려고 하면 에러 발생.</span>
-            
-      <span class="cm">/* static으로 선언된 것들(정적공간) : 객체가 얼마나 생성되든 메모리의 지정된 공간에 딱 하나만 존재한다. 
+
+      <span class="cm">/* static으로 선언된 것들(정적공간) : 객체가 얼마나 생성되든 메모리의 지정된 공간에 딱 하나만 존재한다.
       * 								컴파일 할 때 부터 이 요소가 차지할 메모리 용량을 이미 알 수 있도록 딱 정해져 있기 때문에
       * 								동적요소들과 대비되는 개념으로 static, 정적이라고 불림
       */</span>
@@ -1072,10 +1072,10 @@
           <span class="c1">//2. settings가 이미 만들어진 상태라면 settings를 그대로 반환</span>
           <span class="k">return</span> <span class="n">settings</span><span class="o">;</span>
       <span class="o">}</span>
-            
+
       <span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="n">darkMode</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
       <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">fontSize</span> <span class="o">=</span> <span class="mi">13</span><span class="o">;</span>
-            
+
       <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">getDarkMode</span><span class="o">(){</span><span class="c1">//public: 누구든지 이 클래스의 메소드를 호출 가능</span>
           <span class="k">return</span> <span class="n">darkMode</span><span class="o">;</span>
       <span class="o">}</span>
@@ -1083,7 +1083,7 @@
       <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getFontSize</span><span class="o">()</span> <span class="o">{</span>
           <span class="k">return</span> <span class="n">fontSize</span><span class="o">;</span>
       <span class="o">}</span>
-            
+
       <span class="cm">/* static이 아닌 것들(동적공간) : 객체가 생성될 때마다 메모리의 공간을 새로 차지*/</span>
       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDarkMode</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">_darkMode</span><span class="o">)</span> <span class="o">{</span>
           <span class="n">darkMode</span> <span class="o">=</span> <span class="n">_darkMode</span><span class="o">;</span>
@@ -1122,11 +1122,11 @@
       <span class="c1">//Settings객체의 static 메소드는 이미 메모리의 정적 공간에 자리를 차지하고 있는 상태이기 때문에</span>
       <span class="c1">//해당 객체를 new로 생성하지 않고도 클래스에서 바로 불러낼 수 있음</span>
       <span class="kd">private</span> <span class="nc">Settings</span> <span class="n">settings</span> <span class="o">=</span> <span class="nc">Settings</span><span class="o">.</span><span class="na">getSettings</span><span class="o">();</span>
-            
+
       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAndPrintSetting</span><span class="o">(){</span>
           <span class="n">settings</span><span class="o">.</span><span class="na">setDarkMode</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span> <span class="c1">//정적 settings 객체에 값을 넣음</span>
           <span class="n">settings</span><span class="o">.</span><span class="na">setFontsize</span><span class="o">(</span><span class="mi">15</span><span class="o">);</span>
-                
+
           <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">settings</span><span class="o">.</span><span class="na">getDarkMode</span><span class="o">()+</span><span class="s">" "</span><span class="o">+</span><span class="n">settings</span><span class="o">.</span><span class="na">getFontSize</span><span class="o">());</span><span class="c1">//그 내용들을 출력함</span>
       <span class="o">}</span>
   <span class="o">}</span>
@@ -1159,11 +1159,11 @@
       <span class="c1">//Settings객체의 static 메소드는 이미 메모리의 정적 공간에 자리를 차지하고 있는 상태이기 때문에</span>
       <span class="c1">//해당 객체를 new로 생성하지 않고도 클래스에서 바로 불러낼 수 있음</span>
       <span class="kd">private</span> <span class="nc">Settings</span> <span class="n">settings</span> <span class="o">=</span> <span class="nc">Settings</span><span class="o">.</span><span class="na">getSettings</span><span class="o">();</span>
-            
+
       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAndPrintSetting</span><span class="o">(){</span>
           <span class="n">settings</span><span class="o">.</span><span class="na">setDarkMode</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span> <span class="c1">//정적 settings 객체에 값을 넣음</span>
           <span class="n">settings</span><span class="o">.</span><span class="na">setFontsize</span><span class="o">(</span><span class="mi">15</span><span class="o">);</span>
-                
+
           <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">settings</span><span class="o">.</span><span class="na">getDarkMode</span><span class="o">()+</span><span class="s">" "</span><span class="o">+</span><span class="n">settings</span><span class="o">.</span><span class="na">getFontSize</span><span class="o">());</span><span class="c1">//그 내용들을 출력함</span>
       <span class="o">}</span>
   <span class="o">}</span>
@@ -1274,7 +1274,7 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 
 <p>구글링 중 너무 이미지로 잘 정리해주신 <a href="https://hyeran-story.tistory.com/123">by hyeraan님의 글</a>이 있어 공유합니다.</p>
 
-<p><a href="/assets\img/constrantPool.PNG" class="popup img-link "><img data-src="/assets\img/constrantPool.PNG" alt="constrantPool" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/assets/constrantPool.PNG" class="popup img-link "><img data-src="/assets/img/constrantPool.PNG" alt="constrantPool" class="lazyload" data-proofer-ignore></a></p>
 
 <h4 id="3-반환-타입의-하위-객체를-반환할-수-있는-능력이-있다"><span class="mr-2">3. 반환 타입의 하위 객체를 반환할 수 있는 능력이 있다.</span><a href="#3-반환-타입의-하위-객체를-반환할-수-있는-능력이-있다" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 <p>반환할 객체의 클래스를 자유롭게 선택할 수 있게하는 유연성이 있다.</p>
@@ -1289,10 +1289,10 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 
 <div class="post-tail-wrapper text-muted">
   <!-- categories -->
-  
+
   <div class="post-meta mb-3">
     <i class="far fa-folder-open fa-fw mr-1"></i>
-    
+
     <a
       href="/categories/java/"
       >java</a
@@ -1302,46 +1302,46 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
       >effective-java</a
     >
   </div>
-  
+
 
   <!-- tags -->
-  
+
   <div class="post-tags">
     <i class="fa fa-tags fa-fw mr-1"></i>
-    
+
     <a
       href="/tags/java/"
       class="post-tag no-text-decoration"
     >java</a>
-    
+
     <a
       href="/tags/effective-java-%EC%9E%90%EB%B0%94/"
       class="post-tag no-text-decoration"
     >effective-java 자바</a>
-    
+
     <a
       href="/tags/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%EC%9E%90%EB%B0%94/"
       class="post-tag no-text-decoration"
     >이펙티브자바</a>
-    
+
     <a
       href="/tags/factory-method/"
       class="post-tag no-text-decoration"
     >factory-method</a>
-    
+
     <a
       href="/tags/%ED%8C%A9%ED%86%A0%EB%A6%AC%EB%A9%94%EC%84%9C%EB%93%9C/"
       class="post-tag no-text-decoration"
     >팩토리메서드</a>
-    
+
   </div>
-  
+
 
   <div
     class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"
   >
     <div class="license-wrapper">
-        This post is written by PRO. 
+        This post is written by PRO.
     </div>
 
     <!--
@@ -1351,29 +1351,29 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 <div class="share-wrapper">
   <span class="share-label text-muted mr-1">Share</span>
   <span class="share-icons">
-    
-    
-    
 
-    
-      
+
+
+
+
+
         <a href="https://twitter.com/intent/tweet?text=Item%201%20-%20%EC%83%9D%EC%84%B1%EC%9E%90%20%EB%8C%80%EC%8B%A0%20%EC%A0%95%EC%A0%81%20%ED%8C%A9%ED%84%B0%EB%A6%AC%20%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC%20%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC%20-%20%EA%B2%8C%EC%9E%84%EA%B3%BC%20%EA%B0%9C%EB%B0%9C%EC%82%AC%EC%9D%B4&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Feffective1%2F" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
-    
-      
+
+
         <a href="https://www.facebook.com/sharer/sharer.php?title=Item%201%20-%20%EC%83%9D%EC%84%B1%EC%9E%90%20%EB%8C%80%EC%8B%A0%20%EC%A0%95%EC%A0%81%20%ED%8C%A9%ED%84%B0%EB%A6%AC%20%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC%20%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC%20-%20%EA%B2%8C%EC%9E%84%EA%B3%BC%20%EA%B0%9C%EB%B0%9C%EC%82%AC%EC%9D%B4&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Feffective1%2F" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
-    
-      
+
+
         <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Feffective1%2F&text=Item%201%20-%20%EC%83%9D%EC%84%B1%EC%9E%90%20%EB%8C%80%EC%8B%A0%20%EC%A0%95%EC%A0%81%20%ED%8C%A9%ED%84%B0%EB%A6%AC%20%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC%20%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC%20-%20%EA%B2%8C%EC%9E%84%EA%B3%BC%20%EA%B0%9C%EB%B0%9C%EC%82%AC%EC%9D%B4" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
-    
+
 
     <i id="copy-link" class="fa-fw fas fa-link small"
         data-toggle="tooltip" data-placement="top"
@@ -1399,9 +1399,9 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 ></script>
 
 
-      
-    
-    
+
+
+
 
     </div>
   </div> <!-- #core-wrapper -->
@@ -1410,7 +1410,6 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
   <div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
 
     <div class="access">
-      
 
 
 
@@ -1426,7 +1425,6 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 
 
 
-      
 
 
 
@@ -1442,120 +1440,122 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 
 
 
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1563,22 +1563,22 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
     <div class="panel-heading">Trending Tags</div>
     <div class="d-flex flex-wrap mt-3 mb-1 mr-3">
 
-    
-      
+
+
       <a class="post-tag" href="/tags/effective-java-%EC%9E%90%EB%B0%94/">effective-java 자바</a>
-    
-      
+
+
       <a class="post-tag" href="/tags/factory-method/">factory-method</a>
-    
-      
+
+
       <a class="post-tag" href="/tags/java/">java</a>
-    
-      
+
+
       <a class="post-tag" href="/tags/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%EC%9E%90%EB%B0%94/">이펙티브자바</a>
-    
-      
+
+
       <a class="post-tag" href="/tags/%ED%8C%A9%ED%86%A0%EB%A6%AC%EB%A9%94%EC%84%9C%EB%93%9C/">팩토리메서드</a>
-    
+
 
     </div>
   </div>
@@ -1586,9 +1586,9 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 
     </div>
 
-    
-      
-      
+
+
+
 
 
 
@@ -1601,7 +1601,7 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 </div>
 
 
-    
+
   </div>
 
 </div>
@@ -1610,8 +1610,8 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 
 <div class="row">
   <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 pl-3 pr-3 pr-xl-4 mt-5">
-    
-      
+
+
       <!--
  Recommend the other 3 posts according to the tags and categories of the current post,
  if the number is not enough, use the other latest posts to supplement.
@@ -1632,10 +1632,10 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 
 
 
-  
 
-  
-    
+
+
+
 
 
 
@@ -1646,43 +1646,43 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 
 
 
-  
-    
-    
-  
 
 
 
 
-    
-      
+
+
+
+
+
+
       <!--
   Navigation buttons at the bottom of the post.
 -->
 
 <div class="post-navigation d-flex justify-content-between">
-  
+
   <div class="btn btn-outline-primary disabled"
     prompt="Older">
     <p>-</p>
   </div>
-  
 
-  
+
+
   <div class="btn btn-outline-primary disabled"
     prompt="Newer">
     <p>-</p>
   </div>
-  
+
 
 </div>
 
-    
-      
+
+
       <!--  The comments switcher -->
 
 
-    
+
   </div>
 </div>
 
@@ -1695,7 +1695,6 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 <div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
   <div class="col-12 col-sm-11 post-content">
     <div id="search-hints">
-      
 
 
 
@@ -1711,120 +1710,121 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 
 
 
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1832,22 +1832,22 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
     <div class="panel-heading">Trending Tags</div>
     <div class="d-flex flex-wrap mt-3 mb-1 mr-3">
 
-    
-      
+
+
       <a class="post-tag" href="/tags/effective-java-%EC%9E%90%EB%B0%94/">effective-java 자바</a>
-    
-      
+
+
       <a class="post-tag" href="/tags/factory-method/">factory-method</a>
-    
-      
+
+
       <a class="post-tag" href="/tags/java/">java</a>
-    
-      
+
+
       <a class="post-tag" href="/tags/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%EC%9E%90%EB%B0%94/">이펙티브자바</a>
-    
-      
+
+
       <a class="post-tag" href="/tags/%ED%8C%A9%ED%86%A0%EB%A6%AC%EB%A9%94%EC%84%9C%EB%93%9C/">팩토리메서드</a>
-    
+
 
     </div>
   </div>
@@ -1871,14 +1871,14 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
       <div class="footer-left">
         <p class="mb-0">
           © 2024
-          <a href="https://github.com/GangEunZzang">GangEun</a>. 
+          <a href="https://github.com/GangEunZzang">GangEun</a>.
           <span
             data-toggle="tooltip"
             data-placement="top"
             title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author."
             >All rights reserved.</span
           >
-          
+
         </p>
       </div>
 
@@ -1891,7 +1891,7 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
 </footer>
 
 
-    
+
 
     <div id="mask"></div>
 
@@ -1899,7 +1899,7 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
       <i class="fas fa-angle-up"></i>
     </a>
 
-    
+
       <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
         data-animation="true" data-autohide="false">
         <div class="toast-header">
@@ -1914,7 +1914,7 @@ ex) 위 소스코드의 FirstPage 클래스에서 <code class="language-plaintex
           </button>
         </div>
       </div>
-    
+
 
     <!--
   Jekyll Simple Search loader
@@ -1962,14 +1962,11 @@ SimpleJekyllSearch({
 <!-- layout specified -->
 
 
-  
+
 
 
 
   <!-- image lazy-loading & popup & clipboard -->
-  
-
-  
 
 
 
@@ -1977,30 +1974,33 @@ SimpleJekyllSearch({
 
 
 
-  
-    
-
-    
-
-  
 
 
 
-  
-    
-
-    
-
-  
 
 
 
-  
-    
 
-    
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2012,11 +2012,6 @@ SimpleJekyllSearch({
 
 
 
-  
-
-  
-
-  
 
 
 
@@ -2024,39 +2019,44 @@ SimpleJekyllSearch({
 
 
 
-  
-    
-
-    
-
-  
 
 
 
-  
-    
-
-    
-
-  
 
 
 
-  
-    
-
-    
-
-  
 
 
 
-  
-    
 
-    
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
