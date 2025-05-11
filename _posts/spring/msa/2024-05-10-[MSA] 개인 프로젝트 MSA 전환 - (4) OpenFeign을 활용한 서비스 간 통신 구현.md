@@ -284,8 +284,7 @@ Feign의 기본 디코더는 data 필드까지 자동으로 파싱해주지 않�
 
 ### 📌 해결 방법
 
-1. UserApiResponse
-   → 공통 응답 포맷을 담기 위한 Generic 클래스
+1. UserApiResponse → 공통 응답 포맷을 담기 위한 Generic 클래스
 
 ```java
 @Getter
@@ -305,6 +304,7 @@ public class UserApiResponse<T> {
 ```
 
 2. UserApiResponseDecoder → Feign 응답을 읽어와 ObjectMapper를 사용해 UserApiResponse<T>로 변환
+
 ```java
 @RequiredArgsConstructor
 public class UserApiResponseDecoder implements Decoder {
