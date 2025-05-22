@@ -266,26 +266,140 @@ GET localhost:8888/user-service/local,common,oauth2
 
 <br> <br>
 
-## ✅ 동적으로 설정 변경하기 (Spring Cloud Bus)
+## ✅ 동적으로 설정 변경하기 
 
-설정을 변경한 뒤 서버를 재시작하지 않고도 반영하려면 `Spring Cloud Bus`를 사용합니다.
+설정 파일을 변경한 뒤 서버를 재시작하지 않고도 반영하려면 `Spring Cloud Bus`를 사용 할 수 있습니다.  
 
-### 1️⃣ RabbitMQ 같은 메시지 브로커 연동
-`spring-cloud-starter-bus-amqp` 추가 후 RabbitMQ 연동 필요
+하지만, Spring Cloud Bus를 연동하기 위해선 rabbitMq의 연동이 필요해서 배보다 배꼽이 커지는 기분이라 나만의 방법대로 구현해 봤습니다.
 
-```
-dependencies {
-  implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
+제가 구성한 흐름은 다음과 같습니다.
+
+###  1️⃣ Config Server 모듈에 refresh Controller 구현
+
+```java
+package com.moneyminder.presentation;
+
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+@Slf4j
+@RequiredArgsConstructor
+@RestController
+@RequestMapping("/webhook")
+public class GitWebHookController {
+
+    private static final String CONFIG_PREFIX = "config/";
+    private static final String REFRESH_ENDPOINT = "/actuator/refresh";
+
+    private final DiscoveryClient discoveryClient;
+    private final RestTemplate restTemplate = new RestTemplate();
+
+    @PostMapping
+    public ResponseEntity<String> handleWebhook(@RequestBody WebhookPayload payload) {
+        Set<String> affectedServices = extractServiceNamesFrom(payload);
+
+        if (affectedServices.isEmpty()) {
+            log.info("📭 변경된 서비스 없음 (스킵)");
+            return ResponseEntity.ok("No services to refresh.");
+        }
+
+        affectedServices.forEach(this::refreshService);
+
+        return ResponseEntity.ok("Webhook processed.");
+    }
+
+    private Set<String> extractServiceNamesFrom(WebhookPayload payload) {
+        Set<String> serviceNames = new HashSet<>();
+
+        if (payload.getCommits() == null) return serviceNames;
+
+        for (Commit commit : payload.getCommits()) {
+            if (commit.getModified() == null) continue;
+
+            for (String path : commit.getModified()) {
+                if (path != null && path.startsWith(CONFIG_PREFIX)) {
+                    String[] parts = path.split("/");
+                    if (parts.length >= 2) {
+                        serviceNames.add(parts[1].trim());
+                    }
+                }
+            }
+        }
+
+        return serviceNames;
+    }
+
+    private void refreshService(String serviceName) {
+        List<ServiceInstance> instances = discoveryClient.getInstances(serviceName);
+
+        if (instances.isEmpty()) {
+            log.warn("❗ Eureka에서 '{}' 서비스 인스턴스를 찾을 수 없습니다.", serviceName);
+            return;
+        }
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<String> entity = new HttpEntity<>("", headers);
+
+        for (ServiceInstance instance : instances) {
+            String url = instance.getUri() + REFRESH_ENDPOINT;
+            try {
+                restTemplate.postForEntity(url, entity, String.class);
+                log.info("✅ 설정 리프레시 완료 → [{}] @ [{}]", serviceName, url);
+            } catch (Exception e) {
+                log.error("❌ 설정 리프레시 실패 → [{}] @ [{}]: {}", serviceName, url, e.getMessage(), e);
+            }
+        }
+    }
+
+    @Data
+    public static class WebhookPayload {
+        private List<Commit> commits;
+    }
+
+    @Data
+    public static class Commit {
+        private List<String> modified;
+    }
 }
-```
-
-### 2️⃣ 설정 변경 후 POST 요청으로 refresh
 
 ```
-curl -X POST http://localhost:8080/actuator/refresh
-```
 
-→ 변경된 설정을 실시간으로 반영 가능
+위 로직은 요청이 `git WebHook`으로부터 요청이 들어오면 커밋 메세지를 살피고 수정된 파일에서. 
+service 이름을 추출하여 해당 서비스의 `refresh` 엔드포인트를 호출합니다.
+
+<br> 
+
+### 2️⃣ Git WebHook 설정
+
+GitHub에서 WebHook을 설정합니다.
+![img_7.png](../../../assets/img/img_7.png)
+
+여기서 payload URL은 `ngrok`를 사용하여 외부에서 접근할 수 있도록 설정했습니다.
+
+<br>
+
+
+위와 같이 간단하게 컨트롤러를 구현하고 WebHook을 설정하면, Spring Cloud Bus를 사용하지 않고도
+동적 Refresh를 적용 할 수 있습니다.
+
 
 <br>
 
@@ -294,14 +408,4 @@ curl -X POST http://localhost:8080/actuator/refresh
 ## ✅ 마치며
 
 이번 포스팅에서는 Config Server를 이용한 설정 관리 방법을 소개했습니다.  
-MSA 환경에서 서비스를 많이 나누면 나눌수록 설정의 복잡도도 함께 증가하기 때문에  
-**설정 관리의 중앙 집중화**는 필수입니다.
-
-OpenFeign으로 통신 구조를 설계한 이후,  
-각 서비스의 `Base URL`, `Timeout`, `DB 연결`, `OAuth 설정` 등을 모두 Config Server로 통합함으로써  
-운영과 배포가 훨씬 수월해졌습니다.
-
----
-
-**📌 다음 포스팅에서는**  
-*Spring Cloud Gateway와 Spring Security를 연동해 JWT 기반 인증 처리* 를 다루겠습니다.
+다음 포스팅에서는 `Circuit Breaker` 와 `FallBack` 를 이용한 장애 복구 방법에 대해 알아보겠습니다.  
