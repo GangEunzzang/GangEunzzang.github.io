@@ -118,7 +118,7 @@ kafka:
 
 <br>
   
-![img_8.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_8.png)
+![img_8.png](../../../assets/img/img_8.png)
 
 위와 같이 cloud config 환경을 구성하게 되면 설정 파일들을 하나의 서버에서 관리할 수 있고,
 설정 파일이 변경되어도 재빌드 & 재배포 없이 운영이 가능합니다.
@@ -146,7 +146,7 @@ ConfigServer는 이 Repository를 읽어 서비스에 제공하는 역할을 합
 
 ### 📌1. Config Git Repository 생성
 
-![img_9.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_9.png)
+![img_9.png](../../../assets/img/img_9.png)
 
 📁 config-repo   
 ├── config  
@@ -261,8 +261,7 @@ GET localhost:8888/user-service/local,common,oauth2
 
 <br> 
 
-![img_10.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_10.png)
-
+![img_10.png](../../../assets/img/img_10.png)
 위와 같이 설정한 파일 값을 json 형태로 응답 받을 수 있습니다. 
 
 ---
