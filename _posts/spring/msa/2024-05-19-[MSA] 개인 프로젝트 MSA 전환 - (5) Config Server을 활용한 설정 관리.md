@@ -116,8 +116,9 @@ kafka:
 | 동적 반영 | Spring Bus와 연동 시 실시간으로 설정 변경 가능 |
 | 보안 구성 | 암호화된 설정 정보 관리 가능 |
 
-
-![img_1.png](..%2F..%2F..%2Fassets%2Fimg3%2Fimg_1.png)
+<br>
+  
+![img_8.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_8.png)
 
 위와 같이 cloud config 환경을 구성하게 되면 설정 파일들을 하나의 서버에서 관리할 수 있고,
 설정 파일이 변경되어도 재빌드 & 재배포 없이 운영이 가능합니다.
@@ -145,7 +146,7 @@ ConfigServer는 이 Repository를 읽어 서비스에 제공하는 역할을 합
 
 ### 📌1. Config Git Repository 생성
 
-![img_2.png](..%2F..%2F..%2Fassets%2Fimg3%2Fimg_2.png)
+![img_9.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_9.png)
 
 📁 config-repo   
 ├── config  
@@ -165,7 +166,7 @@ yml 파일 이름은 `application.yml`로 사용하셔도 되고, 저처럼 서�
 
 `spring-cloud-starter-config` 의존성을 추가합니다.
 
-```
+``` groovy
 dependencies {
   implementation 'org.springframework.cloud:spring-cloud-config-server'
 }
@@ -173,7 +174,7 @@ dependencies {
 
 `@EnableConfigServer` 어노테이션으로 Config 서버를 활성화합니다.
 
-```
+``` java
 @EnableConfigServer
 @SpringBootApplication
 public class ConfigServerApplication {
@@ -185,7 +186,7 @@ public class ConfigServerApplication {
 
 `application.yml`에 Git 저장소 설정을 합니다.
 
-```
+``` yaml
 server:
   port: 8888
 
@@ -253,10 +254,12 @@ spring:
 
 이제 config Server에 적용된 설정 파일을 호출해보겠습니다.
 
-```http request
+```text
 ### user-service의 설정 파일 호출
 GET localhost:8888/user-service/local,common,oauth2
 ```
+
+<br> 
 
 ![img_10.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_10.png)
 
