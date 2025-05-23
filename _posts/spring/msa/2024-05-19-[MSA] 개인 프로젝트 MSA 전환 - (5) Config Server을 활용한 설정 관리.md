@@ -220,7 +220,7 @@ management:
 
 각 서비스에는 `spring-cloud-starter-config` 의존성을 추가합니다.
 
-```
+```groovy
 dependencies {
   implementation 'org.springframework.cloud:spring-cloud-starter-config'
 }
@@ -228,7 +228,7 @@ dependencies {
 
 `application.yml`에 Config Server의 URL을 설정합니다.
 
-```
+``` yaml
 spring:
   application:
     name: eureka
@@ -258,7 +258,7 @@ spring:
 GET localhost:8888/user-service/local,common,oauth2
 ```
 
-![img_3.png](..%2F..%2F..%2Fassets%2Fimg3%2Fimg_3.png)
+![img_10.png](..%2F..%2F..%2Fassets%2Fimg%2Fimg_10.png)
 
 위와 같이 설정한 파일 값을 json 형태로 응답 받을 수 있습니다. 
 
