@@ -193,38 +193,101 @@ public class UserFeignFallback implements UserFeignClient {
 
 <br> <br>
 
-## ✅ 테스트 
 
-1. 정상적인 상황에서 `user-service` 호출 → 데이터 반환
-2. user-service 다운됨 → 일정 횟수 실패 후 Circuit Open
-3. 이후 호출은 fallback 메서드로 우회
-4. 일정 시간 후 Half-Open → 성공 여부에 따라 상태 복구 or 재오픈
+## ✅ Circuit Breaker 시나리오 테스트
 
+Circuit Breaker가 정상적으로 동작하는지 테스트 해보겠습니다.
 
-### 📌 서킷 브레이커 동작 시나리오
+### 📌 테스트 환경 설정
 
-현재 제 서킷 브레이커 설정은 아래와 같습니다.
+- Sliding Window 타입 : COUNT_BASED (요청 개수 기준)
+- Sliding Window 크기 : 10 (최근 10개 요청 기준으로 상태 판단)
+- failure call 비율 : 50%
+- slow call 비율 : 80%
+- Open → Half-Open 최소 대기 시간 : 10초
+- Half-Open 상태 테스트 요청 개수 : 3개
 
-1. 최근 10번의 호출 중 실패율이 50%를 초과하거나 Slow Call 비율이 80%를 초과하면 Open 상태로 전환
-2. Open 상태에서 10초 후 Half-Open 상태로 전환
-3. Half-Open 상태에서 3번의 호출을 시도
-4. 성공하면 Closed 상태로 전환, 실패하면 다시 Open 상태 유지
+---
 
-위 설정을 기반으로 테스트를 진행해보겠습니다.
+### 1️⃣ Closed → Open 전환 테스트 (10개 요청 실패 시)
 
+- **테스트 방식**:
+  호출받는 서비스(Member-Service)를 중지한 후, 호출하는 서비스(Board-Service)에서 연속으로 10개의 요청 전송
 
-#### 50% 이상의 실패율이 발생하도록 `user-service`를 다운시킵니다.
+- **기대 결과**:
+  10번째 요청이 실패한 직후 Circuit Breaker 상태가 Closed에서 Open으로 전환
 
+- **테스트 결과**:
+  - 9번째 요청 후 상태 확인:  
+    ```json
+    {
+    "state": "CLOSED",
+    "failedCalls": 9
+    }
+    ```
 
+  - 10번째 요청 후 상태 확인:
+    ```json
+    {
+    "state": "OPEN",
+    "failedCalls": 10
+    }
+    ```
 
+---
 
+### 2️⃣ Open → Half-Open 전환 테스트 (Open 상태에서 10초 경과 후)
 
+- **테스트 방식**:
+  위의 테스트에서 상태가 Open으로 전환된 후, 10초를 기다리고 다시 요청을 1회 전송
 
+- **기대 결과**:
+  요청을 보낸 직후 Circuit Breaker가 Half-Open 상태로 전환
+  
 
+  - 요청 후 상태 확인:
+    ```json
+    {
+    "state": "HALF_OPEN"
+    }
+    ```
 
+---
 
+### 3️⃣ Half-Open → Closed/Open 전환 테스트 (3개의 요청 성공/실패로 상태 판단)
 
-이를 통해 장애 시 시스템이 멈추지 않고 기본 응답을 유지할 수 있습니다.
+#### 📌 상황 A: 3개 요청 중 1개 실패, 2개 성공
+
+- **테스트 방식**:
+  Member-Service를 다시 정상 실행 후, Half-Open 상태에서 3개 요청 중 1개는 의도적으로 실패, 2개는 성공 처리
+
+- **기대 결과**:
+  실패율이 33.3%로 기준(50%) 미만이므로 Circuit Breaker 상태는 Closed로 전환
+
+  ```json
+  {
+  "state": "CLOSED",
+  "failedCalls": 0
+  }
+  ```
+
+---
+
+#### 📌 상황 B: 3개 요청 중 2개 실패, 1개 성공
+
+- **테스트 방식**:
+  다시 Half-Open 상태로 전환 후, 3개 요청 중 2개는 의도적으로 실패, 1개는 성공 처리
+
+- **기대 결과**:
+  실패율이 66.6%로 기준(50%) 초과이므로 Circuit Breaker 상태는 다시 Open으로 전환
+
+  ```json
+  {
+  "state": "OPEN",
+  "failedCalls": 2,
+  "failureRate": "66.6%"
+  }
+  ```
 
 ---
 
