@@ -65,7 +65,7 @@ Fallback은 Circuit Breaker가 Open 상태일 때, 대체 응답을 제공하는
 
 ---
 
-<br> >br>
+<br> <br>
 
 
 ## ✅ Resilience4j + Spring Boot 적용하기

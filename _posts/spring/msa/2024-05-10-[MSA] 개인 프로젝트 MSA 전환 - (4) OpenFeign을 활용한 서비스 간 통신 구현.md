@@ -240,24 +240,12 @@ public UserFeignResponse testUserInfo(String email) {
 
 ## ✅ OpenFeign 통신 흐름
 
-```mermaid
-sequenceDiagram
-  participant Client
-  participant ApiGateway
-  participant AccountBookService
-  participant Eureka
-  participant UserService
+![img_1.png](../../../assets/img3/img_1.png)
 
-  Client->>ApiGateway: /account-book/testUserInfo 요청
-  ApiGateway->>AccountBookService: /testUserInfo 전달 (라우팅)
-  AccountBookService->>Eureka: user-service 인스턴스 조회 (Feign)
-  AccountBookService->>UserService: /api/v1/user/user-info 호출
-  UserService-->>AccountBookService: 사용자 정보 응답
-  AccountBookService-->>ApiGateway: 사용자 정보 응답
-  ApiGateway-->>Client: 최종 응답
-```
 
 <br><br>
+
+
 
 ---
 ## ✅ OpenFeign 응답 커스텀 마이징

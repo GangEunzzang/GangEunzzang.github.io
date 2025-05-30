@@ -49,19 +49,7 @@ Service Discovery는 크게 두 가지 방식으로 나눌 수 있습니다.
 * 서비스가 추가되거나 변경될 때 클라이언트도 함께 변경해야 한다.
 * 언어가 다를경우 언어 및 프레임워크에 맞게 별도로 관리해줘야 한다.
 
-```mermaid
-graph TD
-  Client["🧑‍💻 Client "]
-  Eureka["📘 Discovery Server (Eureka)"]
-  Service1["🟦 Service A - 인스턴스 1"]
-  Service2["🟦 Service A - 인스턴스 2"]
-
-  Client -->|서비스 목록 조회| Eureka
-  Eureka --> Service1
-  Eureka --> Service2
-  Client -->|인스턴스 직접 선택 후 호출| Service1
-
-```
+![img_2.png](../../../assets/img3/img_2.png)
 
 
 <br> <br>
@@ -79,22 +67,7 @@ graph TD
 **단점**
 * `api gateway`나 `load balancer`와 같은 추가적인 홉이 필요합니다.
 
-
-```mermaid
-graph TD
-  Client["🧑‍💻 Client "]
-  Gateway["🚪 API Gateway"]
-  Eureka["📘 Discovery Server (Eureka)"]
-  Service1["🟦 Service A - 인스턴스 1"]
-  Service2["🟦 Service A - 인스턴스 2"]
-
-  Client -->|요청| Gateway
-  Gateway -->|서비스 목록 조회| Eureka
-  Eureka --> Service1
-  Eureka --> Service2
-  Gateway -->|라우팅| Service2
-
-```
+![img_3.png](../../../assets/img3/img_3.png)
 
 <br> <br>
 
