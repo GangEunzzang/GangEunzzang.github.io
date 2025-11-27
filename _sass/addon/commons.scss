@@ -1539,6 +1539,12 @@ $sidebar-display: "sidebar-display";
 /* --- desktop mode, both sidebar and panel are visible --- */
 
 @media all and (min-width: 1200px) {
+  #topbar,
+  #main,
+  footer > .container {
+    max-width: $main-content-max-width;
+  }
+
   #back-to-top {
     bottom: 6.5rem;
   }
